@@ -12,7 +12,7 @@ exportFilename: pw1_aula6
 ---
 layout: side-title
 color: navy
-align: lm-lm
+align: rm-lm
 ---
 
 :: title ::
@@ -83,7 +83,87 @@ which is a URI (or path) and a specific HTTP request method (GET, POST, and so o
 
 [Roteamento Básico](https://expressjs.com/en/starter/basic-routing.html)
 
+---
+layout: top-title-two-cols
+color: navy
+---
 
+:: title ::
+# Roteamento Básico
+
+:: left ::
+- *Routing*
+- ```app``` instância do Express
+- **METHOD** método HTTP a ser tratado (GET, POST, etc)
+- **PATH** caminho no servidor
+- **HANDLER** função que será executada quando for recebida uma requisição para a rota especificada
+
+:: right ::
+<!--```app.METHOD(PATH, HEANDLER)```-->
+
+---
+layout: top-title-two-cols
+color: navy
+---
+
+:: title ::
+# Exemplos
+
+:: left ::
+```js
+app.get('/about', (req, res) => {
+    ...
+});
+```
+
+```js
+app.put('/new', (req, res) => {
+    ...
+});
+```
+
+:: right ::
+```js
+app.post('/users/add', (req, res) => {
+    ...
+});
+```
+
+```js
+app.delete('/users/remove', (req, res) => {
+    ...
+});
+```
+
+---
+layout: top-title-two-cols
+color: navy
+---
+
+:: title ::
+# 
+:: left ::
+
+:: right ::
+
+
+---
+layout: fact
+---
+
+# Como realizar testes com métodos diferentes do GET?
+
+---
+layout: side-title
+title: Postman
+url: https://www.postman.com/product/what-is-postman/
+---
+
+:: title ::
+# Postman
+:: content ::
+- Plataforma para testar APIs
+- Uso online ou *desktop*
 
 ---
 layout: top-title
