@@ -77,15 +77,12 @@ Agenda
 
 ## Aula 8
 
-# Objetivos de Aprendizagem
+Objetivos de Aprendizagem
 - O que são *Template Engines*?
 - Instalar o *Template Engine* EJS
 - Utilizar funções básicas de *templates* em geral
 
----
-
-# Agenda
-
+Agenda
 - *Template engines*
 - Instalação
 - Exemplo de aplicação com EJS
