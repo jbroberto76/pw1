@@ -86,3 +86,38 @@ Agenda
 - *Template engines*
 - Instalação
 - Exemplo de aplicação com EJS
+
+## Aula 9
+Objetivos de aprendizagem
+- Conhecer o conceito de bancos de dados NoSQL
+- Iniciar a utilização do MongoDB
+- Criar conta MongoDB Atlas
+
+Agenda
+- SQL x NoSQL
+- MongoDB
+- CRUD
+
+## Aula 10
+Objetivo de Aprendizagem
+- Aplicar o MongoDB juntamente com Nodejs
+
+Agenda
+- `MongoClient`
+- *Connection Guide*
+- Cursor
+
+## Aula 11
+
+Objetivos de Aprendizagem
+- Conhecer o conceito de API
+- Construir a primeira API em Nodejs
+
+Agenda
+- Conceito
+- Arquiteturas Típicas
+- REST
+- Criando a primeira API
+
+*Source Code*
+[apihello](https://github.com/pw1-repo/apihello.git)

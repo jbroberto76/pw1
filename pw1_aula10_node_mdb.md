@@ -14,7 +14,7 @@ Nodejs + MongoDB
 
 ---
 
-# Objetivos de Aprendizagem
+# Objetivo de Aprendizagem
 - Aplicar o MongoDB juntamente com Nodejs
 
 ---
