@@ -2,7 +2,7 @@
 theme: default
 lineNumbers: true
 layout: cover
-title: API
+title: Application Programming Interface
 author: José Roberto Bezerra
 exportFilename: pw1_aula12_api
 colorSchema: dark
@@ -305,9 +305,33 @@ app.get('/v1/hi/user/:name', function(req, res) {
 ---
 
 # API Hello
-`*`
+`/v1/hi` (POST)
 
-6. Criar um *endpoint* coringa (*) para o caso de acesso a uma URL inexistente. A resposta esperada é uma mensagem de **erro** em formato JSON a ser exibida no navegador do usuário em resposta a uma requisição GET
+6. Criar um *endpoint* que atenda requisições via método POST (formulários HTML). A resposta esperada deve ser a mesma do ítem 5.
+    - Para que a API possa obter dados a partir de um formulário é necessário processar caracteres codificados (linha 28)
+        
+```js {*}{startLine: 28}
+app.use(express.urlencoded({ extended: true }))
+app.post('/v1/hi', function(req, res) {
+    const { name } = req.body;
+
+    if (!name) {
+        return res.status(400).json({ error: "Name is required" });
+    }
+
+    const out = {
+        msg: `Hello, ${name.toUpperCase()} from POST!`,
+    };
+    res.status(200).json(out);
+})
+```
+
+---
+
+# API Hello
+`/*splat`
+
+7. Criar um *endpoint* coringa (/*splat) para o caso de acesso a uma URL inexistente. A resposta esperada é uma mensagem de **erro** em formato JSON a ser exibida no navegador do usuário em resposta a uma requisição GET
 
 ```json
 {
@@ -315,34 +339,14 @@ app.get('/v1/hi/user/:name', function(req, res) {
 }
 ```
 
-```js {*}{startLine: 27}
+```js {*}{startLine: 42}
+// express v4 use '/*'
+// express v5 use '/*splat'
 app.get('*', function(req, res) {
     const err = {
         error: 'Invalid endpoint'
     }
     res.status(404).json(err)
-})
-```
-
----
-
-# API Hello
-`/v1/hi` (POST)
-
-7. Criar um *endpoint* que atenda requisições via método POST (formulários HTML). A resposta esperada deve ser a mesma do ítem 5.
-
-```json
-{
-    "msg": "Hello, [name]"
-}
-```
-
-```js {*}{startLine: 27}
-app.post('*', function(req, res) {
-    const err = {
-        error: 'Invalid endpoint'
-    }
-    res.status(200).json(err)
 })
 ```
 
@@ -396,8 +400,6 @@ layout: statement
 # 2
 
 Criar a versão 2 (v2) da API Hello de forma que as mensagens seja exibidas em 3 idiomas diferentes (pt-br, es, en). A opção do idioma pode ser passada através da URL e também através do formulário. As duas versões da API devem ficar disponíveis para o usuário.
-
-
 
 ---
 

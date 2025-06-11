@@ -125,6 +125,16 @@ Agenda
 - Criando a primeira API
 
 *Source Code*
-[apihello](https://github.com/pw1-repo/apihello.git)
+[API Hello](https://github.com/pw1-repo/apihello.git)
 
 ## Aula 13
+
+Objetivo de Aprendizagem
+- Aplicar APIs de terceiros em projetos próprios
+
+Agenda
+- Criando requisições com Nodejs
+- Consumindo a API Hello
+- Consumindo a API getBTC
+
+## Aula 14
