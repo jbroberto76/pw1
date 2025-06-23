@@ -59,18 +59,29 @@ Módulos típicos
 
 # Axios
 - Realiza requisições HTTP a partir do Nodejs
-- Suporta Promises
+- Suporta `Promises`
 - Transformações de dados JSON automáticas
 
+---
+layout: quote
 ---
 
 # Promise
 
-> Objeto que representa a eventual conclusão ou falha de uma operação assíncrona
+> Objeto retonado pela chamada de métodos assíncronos e permite acesso às informações de eventual conclusão ou falha de uma operação assíncrona.
 
 ---
 
-# Axios
+# Promise
+Possíveis estados
+
+- *pending*: estado inicial
+- *fulfilled*: operação concluída e com sucesso
+- *rejected*: operação falhou
+
+---
+
+# Usando Axios
 Instalação
 
 - `npm install axios`
@@ -185,20 +196,20 @@ layout: section
 layout: statement
 ---
 
-# A ideia é criar a aplicação HelloApp que utiliza (consome) or recursos da API Hello criada na aula anterior (ver Referências).
+# A ideia é criar a aplicação `HelloApp` que utiliza, aplica (consome) os recursos da `API Hello` criada na aula anterior.
 
 ---
 
 # HelloApp
 
-1. Criar a rota `/` com um *form* de um único campo (Nome do usuáio)
+1. Criar a rota `/` com um *form* de um único campo (Nome do usuário)
 2. O *form* envia (via POST) para a rota `/who`
 3. Em `/who` o Nome é passado pela API Hello que faz seu trabalho e retorna para Hello App
 4. Ainda em `/who` a informação é mostrada ao usuário
 
 ---
 
-# API Hello
+# API Hello (Aula anterior)
 *Endpoints*
 
 ```plantuml
@@ -210,6 +221,8 @@ layout: statement
 ***_ ""/v1/hi/user/:name (POST)""
 @endwbs
 ```
+
+[<logos-git-icon /> API Hello](https://github.com/pw1-repo/apihello.git)
 
 ---
 
@@ -239,6 +252,8 @@ app.use(express.urlencoded({ extended: true }))
 // URL da API
 const API_URL = '' 
 ```
+
+**Sugestão**: Usar a API Hello através do GitHub Codespaces.
 
 ---
 
@@ -373,6 +388,12 @@ app.post('/who', async (req, res) => {
 ```
 
 ---
+layout: quote
+---
+
+> **E se...** a API utilizada aceitar requisições apenas a partir de um método específico? POST, por exemplo.
+
+---
 
 # HelloApp
 `/whobypost`
@@ -404,19 +425,33 @@ app.post('/whobypost', (req, res) => {
 ```
 
 ---
-layout: section
+
+# APIs Públicas
+
+- Existem diversos repositórios de APIs públicas que podem ser utilizadas em projetos
+- Existem também APIs pagas
+- Seguem alguns exemplos de respositórios de APIs públicas:
+  - [A directory of free and public apis](https://publicapis.io/)
+  - [Public REST APIs](https://www.postman.com/cs-demo/public-rest-apis/overview)
+
+---
+layout: fact
 ---
 
-# Consumindo a API getBTC
+# Exercícios
 
 ---
 
+# 1
+
+Criar uma aplicação Mensagem do Dia que consome a API [Ron Swanson Quotes](https://www.postman.com/cs-demo/public-rest-apis/request/uc3wcpm/ron-swanson-quotes). Utilize Express, Bootstrap e EJS. Ferramentas alternativas podem ser aplicadas.
 
 ---
 
 # Referências
 
 - [API Hello](https://github.com/pw1-repo/apihello.git)
+- [mdn web docs Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ---
 layout: end
