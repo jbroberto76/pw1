@@ -21,7 +21,6 @@ Cosumindo APIs de Terceiros
 # Agenda
 - Criando requisições com Nodejs
 - Consumindo a API Hello
-- Consumindo a API getBTC
 
 ---
 layout: section
@@ -86,7 +85,7 @@ Instalação
 
 - `npm install axios`
 
-```js
+```js {*}{class: '!children:text-2xl'}
 const axios = require('axios');
 ```
 
@@ -95,7 +94,7 @@ const axios = require('axios');
 # Axios
 GET usando Promise
 
-```js
+```js {*}{class: '!children:text-xl'}
 // Make a request for a user with a given ID
 axios.get('/user?ID=12345')
   .then(function (response) {
@@ -116,8 +115,7 @@ axios.get('/user?ID=12345')
 # Axios 
 GET com Promise e `params`
 
-```js
-// Optionally the request above could also be done as
+```js {*}{class: '!children:text-xl'}
 axios.get('/user', {
     params: {
       ID: 12345
@@ -139,8 +137,7 @@ axios.get('/user', {
 # Axios
 GET com `async/await`
 
-```js
-// Want to use async/await? Add the `async` keyword to your outer function/method.
+```js {*}{class: '!children:text-2xl'}
 async function getUser() {
   try {
     const response = await axios.get('/user?ID=12345');
@@ -156,7 +153,7 @@ async function getUser() {
 # Axios
 Exemplo de POST
 
-```js
+```js {*}{class: '!children:text-2xl'}
 axios.post('/user', {
     firstName: 'Fred',
     lastName: 'Flintstone'
@@ -174,7 +171,7 @@ axios.post('/user', {
 # Axios
 `axios(config)`
 
-```js
+```js {*}{class: '!children:text-2xl'}
 // Send a POST request
 axios({
   method: 'post',
@@ -196,7 +193,7 @@ layout: section
 layout: statement
 ---
 
-# A ideia é criar a aplicação `HelloApp` que utiliza, aplica (consome) os recursos da `API Hello` criada na aula anterior.
+# A ideia é criar a aplicação `HelloApp` que utiliza ou aplica ou consome os recursos da `API Hello` criada na aula anterior.
 
 ---
 
@@ -204,7 +201,7 @@ layout: statement
 
 1. Criar a rota `/` com um *form* de um único campo (Nome do usuário)
 2. O *form* envia (via POST) para a rota `/who`
-3. Em `/who` o Nome é passado pela API Hello que faz seu trabalho e retorna para Hello App
+3. Em `/who` o Nome é passado pela API Hello que faz seu trabalho e retorna para HelloApp
 4. Ainda em `/who` a informação é mostrada ao usuário
 
 ---
@@ -215,10 +212,12 @@ layout: statement
 ```plantuml
 @startwbs
 *_ ""**API Hello**""
-**_ ""*""
-**_ ""/v1/hi""
-***_ ""/v1/hi/user/:name (GET)""
-***_ ""/v1/hi/user/:name (POST)""
+**_ ""GET""
+***_ ""*""
+***_ ""/v1/hi""
+***_ ""/v1/hi/user/:name""
+**_ ""POST""
+***_ ""/v1/hi/""
 @endwbs
 ```
 
@@ -239,7 +238,7 @@ Iniciando o projeto
 # HelloApp
 `app.js`
 
-```js
+```js {*}{class: '!children:text-xl'}
 const express = require('express')
 const app = express()
 const axios = require('axios')
@@ -250,7 +249,8 @@ app.listen(PORT, () => {
 })
 app.use(express.urlencoded({ extended: true }))
 // URL da API
-const API_URL = '' 
+const API_URL = 
+'https://potential-trout-6xgrr4rwwvxh5rrw-8000.app.github.dev' 
 ```
 
 **Sugestão**: Usar a API Hello através do GitHub Codespaces.
@@ -260,7 +260,7 @@ const API_URL = ''
 # HelloApp
 Adicionando as rotas `/` e `/who` ao `app.js`
 
-```js
+```js {*}{class: '!children:text-xl'}
 app.get('/', async (req, res) => {
     res.render('index');
 })
@@ -278,7 +278,7 @@ app.post('/who', async (req, res) => {
 Adicionando os *templates* em `/views`
 
 5. Criar o diretório `views` e dentro dele o diretório `partials`
-6. Em `views` adicionar os arquivos `index.ejs` e `greeting.ejs`
+6. Em `views` adicionar os arquivos `index.ejs` e `message.ejs`
 7. Em `partials` adicionar os arquivos `header.ejs` e `footer.ejs`
 
 ---
@@ -333,7 +333,7 @@ Adicionando os *templates* em `/views`
 ---
 
 # HelloApp
-`greeting.ejs`
+`message.ejs`
 
 ```js
 <%- include('./partials/header'); %>
@@ -372,7 +372,7 @@ Teste parcial
 # HelloApp
 `/who`
 
-```js
+```js {*}{class: '!children:text-2xl'}
 app.post('/who', async (req, res) => {
   const username = req.body.username
   console.log(`Variável username recebida do form: ${username}`)
@@ -432,7 +432,7 @@ app.post('/whobypost', (req, res) => {
 - Existem também APIs pagas
 - Seguem alguns exemplos de respositórios de APIs públicas:
   - [A directory of free and public apis](https://publicapis.io/)
-  - [Public REST APIs](https://www.postman.com/cs-demo/public-rest-apis/overview)
+  - [<logos-postman /> Public REST APIs](https://www.postman.com/cs-demo/public-rest-apis/overview)
 
 ---
 layout: fact
@@ -449,9 +449,10 @@ Criar uma aplicação Mensagem do Dia que consome a API [Ron Swanson Quotes](htt
 ---
 
 # Referências
-
-- [API Hello](https://github.com/pw1-repo/apihello.git)
 - [mdn web docs Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [API Ron Swanson Quotes](https://www.postman.com/cs-demo/public-rest-apis/request/uc3wcpm/ron-swanson-quotes)
+- [<logos-git-icon /> API Hello](https://github.com/pw1-repo/apihello.git)
+- [<logos-git-icon /> HelloAPP](hhttps://github.com/pw1-repo/helloAPP.git)
 
 ---
 layout: end

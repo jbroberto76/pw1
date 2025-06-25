@@ -135,6 +135,5 @@ Objetivo de Aprendizagem
 Agenda
 - Criando requisições com Nodejs
 - Consumindo a API Hello
-- Consumindo a API getBTC
 
 ## Aula 14
