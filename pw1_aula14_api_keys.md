@@ -2,41 +2,111 @@
 theme: default
 lineNumbers: true
 layout: cover
-title: API *Keys*
+title: API Keys
 author: José Roberto Bezerra
 exportFilename: pw1_aula14_api_keys
 colorSchema: dark
 ---
 
-# Programação Web 1
-{{ $slidev.configs.title }}
+# {{ $slidev.configs.title }}
+Programação Web 1
+
 ---
 
 # Objetivo de Aprendizagem
-- Aplicar APIs de terceiros em projetos próprios
+- Aprofundar o conhecimento sobre APIs
 
 ---
 
 # Agenda
-- Criando requisições com Nodejs
-- Consumindo a API Hello
+- O que são API *Keys*?
+- *Final Space* API
+- *NASA Open* API
 
 ---
 layout: section
 ---
 
-# Criando requisições com Nodejs
-
+# O que são API *Keys*?
 
 ---
 
-# APIs Públicas
+# O que são API Keys?
 
-- Existem diversos repositórios de APIs públicas que podem ser utilizadas em projetos
-- Existem também APIs pagas
-- Seguem alguns exemplos de respositórios de APIs públicas:
-  - [A directory of free and public apis](https://publicapis.io/)
-  - [<logos-postman /> Public REST APIs](https://www.postman.com/cs-demo/public-rest-apis/overview)
+- Um **token de autenticação** usado para identificar quem está acessando uma API
+- Pode controlar:
+  - Limites de uso (*rate limits*)
+  - Permissões de acesso
+  - Identificação de cliente
+
+---
+
+# Onde são usadas?
+
+- APIs públicas ou semi-públicas
+- Integrações entre sistemas
+- Exemplos:
+  - Google Maps API
+  - OpenWeatherMap
+  - Stripe, Twilio, etc.
+
+---
+
+# Por que usar API Keys?
+
+- **Identificação** de quem está consumindo a API
+- **Controle de acesso**
+- **Limitação de uso por cliente**
+- **Monitoramento e auditoria**
+
+---
+
+# Como gerar uma API Key?
+
+Depende do serviço. Exemplos:
+
+- No painel de desenvolvedor do provedor da API
+    - Exemplo: criar uma chave no site da [OpenWeatherMap](https://openweathermap.org/api)
+- Mediante um cadastro
+
+---
+
+# Exemplo prático (cliente)
+
+```js {*}{class: '!children:text-xl'}
+const axios = require('axios');
+
+// Nunca exponha as chaves no codigo
+// Utilize variaveis de ambiente
+const API_KEY = 'sua_chave_aqui'; 
+
+axios.get(`https://api.exemplo.com/dados?apikey=${API_KEY}`)
+  .then(res => console.log(res.data))
+  .catch(err => console.error(err));
+```
+
+---
+layout: section
+---
+
+# *Final Space* API
+
+---
+
+---
+
+
+
+---
+layout: section
+---
+
+# *NASA Open* API
+
+---
+
+---
+
 
 ---
 layout: fact
@@ -52,10 +122,9 @@ layout: fact
 ---
 
 # Referências
-- [mdn web docs Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [API Ron Swanson Quotes](https://www.postman.com/cs-demo/public-rest-apis/request/uc3wcpm/ron-swanson-quotes)
-- [<logos-git-icon /> API Hello](https://github.com/pw1-repo/apihello.git)
-- [<logos-git-icon /> HelloAPP](hhttps://github.com/pw1-repo/helloAPP.git)
+- [Final Space API](https://finalspaceapi.com/)
+- [NASA Open API](https://api.nasa.gov/)
+
 
 ---
 layout: end

@@ -136,4 +136,15 @@ Agenda
 - Criando requisições com Nodejs
 - Consumindo a API Hello
 
+*Source Code*
+[HelloAPP](https://github.com/pw1-repo/helloAPP.git)
+
 ## Aula 14
+
+Objetivo de Aprendizagem
+- Aprofundar o conhecimento sobre APIs
+
+Agenda
+- O que são API *Keys*?
+- *Final Space* API
+- *NASA Open* API
