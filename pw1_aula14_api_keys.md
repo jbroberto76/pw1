@@ -111,9 +111,9 @@ Documentação
 - Endereço base
   - [https://finalspaceapi.com/api/v0/](https://finalspaceapi.com/api/v0/)
 - A API disponibiliza informações sobre os personagens
-- As informações são retornadas em JSON
+- As informações são retornadas no formato JSON
 - Todas as requisições são feitas através do método GET
-- API que não utiliza chaves
+- Não utiliza chaves
 [Documentação da API](https://finalspaceapi.com/docs/)
 
 ---
@@ -154,9 +154,6 @@ layout: section
 
 [APOD](https://apod.nasa.gov/)
 
-
-
-
 ---
 layout: fact
 ---
@@ -166,6 +163,16 @@ layout: fact
 ---
 
 # 1
+
+Criar uma aplicação que utiliza NASA APIs APOD para buscar *links* de imagens que contenham um astro específico passado pelo usuário e que não tenha *copyright*. A aplicação deve exibir as imagens em um carrosel. **Sugestão**: Crie uma chave de API no site para melhor utilização dos recursos.
+
+[Generate API Key](https://api.nasa.gov/#:~:text=Overview-,Generate%20API%20Key,-Authentication)
+
+---
+
+# 2
+
+
 
 
 ---
