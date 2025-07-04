@@ -46,10 +46,13 @@ architecture-beta
 
     service db(database)[Database] in api
     service server(server)[Web Server] in api
-    service cloud(cloud) in api
+    service cloud(cloud)
 
     service WebApp(logos:aws)
-    db:L -- R:server
+
+    WebApp:L -- R:cloud
+    cloud:L -- R:server
+    db:R -- L:server
 ```
 
 ---
@@ -96,6 +99,69 @@ AWSCloudGroup(cloud){
 }
 @enduml
 ```
+
+---
+
+# Exemplo
+Gerenciamento de bliblioteca
+
+- Espera-se que exista um recurso associado a livros
+- A aplicação deve ser capaz de realizar operações CRUD nos recursos
+
+```js{*}{lines: false, class: '!children:text-xl'}
+{
+  isbn: "9781593277574",
+  title: "Understanding ECMAScript 6",
+  subtitle: "The Definitive Guide for JavaScript Developers",
+  author: "Nicholas C. Zakas",
+  published: "2016-09-03T00:00:00.000Z",
+  publisher: "No Starch Press",
+  pages: 352,
+  description: "ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that ECMAScript 6 brings to JavaScript.",
+  website: "https://leanpub.com/understandinges6/read"
+}
+```
+
+---
+
+# CREATE
+
+- Função que deve ser aplicada para adicionar um novo livro ao catálogo
+- Como o ISBN é um campo único, pode ser usado como chave
+- Funções do BD
+  - <logos-mongodb-icon /> `insertOne()` ou `insertMany()`
+  - <logos-sqlite /> `INSERT`
+
+---
+
+# READ
+
+- Função que deve ser aplicada para ler, acessar ou buscar livros no catálogo
+- É possível utilizar variações que busquem um livro específico ou grupos de livros de acordo com algum critério
+- Apenas leitura sempre
+  - <logos-mongodb-icon /> `find()` ou `findOne()`
+  - <logos-sqlite /> `SELECT`
+
+---
+
+# UPDATE
+
+- Função que deve ser utilizada para atualizar, alterar informações sobre um livro oou grupo de livros no catálogo
+- Um critério de seleção de grupo deve ser passado, caso contrário a alteração será aplicada a todos os ítens
+  - Mesmo autor ou mesma data de publicação, etc
+  - Título que contém uma palavra chave
+- <logos-mongodb-icon /> `updateOne()` ou `updateMany()` ou `replaceOne()`
+- <logos-sqlite /> `UPDATE`
+
+---
+
+# DELETE
+
+- Função para remover um único ou múltiplos livros do catálogo de acordo com critérios de seleção similar ao UPDATE
+- Deve ser usado com cuidado
+- <logos-mongodb-icon /> `deleteOne()` ou `deleteMany()` ou `remove()`
+- <logos-sqlite /> `DEL`
+
 
 ---
 layout: fact

@@ -149,7 +149,7 @@ Agenda
 - *Final Space* API
 - *NASA Open* API
 
-## Aula 15
+## Aula 15 (INCOMPLETA)
 Objetivo de Aprendizagem
 - Construir uma API com acesso a bancos de dados
 
