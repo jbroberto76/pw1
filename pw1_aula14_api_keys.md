@@ -170,13 +170,6 @@ Criar uma aplicação que utiliza NASA APIs APOD para buscar *links* de imagens 
 
 ---
 
-# 2
-
-
-
-
----
-
 # Referências
 - [Final Space API](https://finalspaceapi.com/)
 - [NASA Open API](https://api.nasa.gov/)

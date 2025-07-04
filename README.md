@@ -148,3 +148,11 @@ Agenda
 - O que são API *Keys*?
 - *Final Space* API
 - *NASA Open* API
+
+## Aula 15
+Objetivo de Aprendizagem
+- Construir uma API com acesso a bancos de dados
+
+Agenda
+- CRUD
+- CRUD + REST
