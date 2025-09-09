@@ -1,7 +1,8 @@
 ---
 theme: default
 lineNumbers: true
-layout: cover
+layout: image-right
+image: ./img/jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: API + CRUD
 author: José Roberto Bezerra
 exportFilename: pw1_aula15_api_crud
