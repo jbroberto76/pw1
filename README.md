@@ -14,10 +14,10 @@ Agenda
 - Conceitos e Tecnologias
 - Metodologia
 
-## Aula 1
+## Aula 1 - Planejamento de *Layout*
 
 
-## Aula 2
+## Aula 2 - HTML5
 
 Objetivo de aprendizagem
 - Revisar os conceitos fundamentais do HTML
@@ -28,7 +28,7 @@ Agenda
 - Medição de desempenho
 - HTML5
 
-## Aula 3
+## Aula 3 - CSS
 
 Objetivo de aprendizagem
 - Conhecer os princípios básicos do CSS3
