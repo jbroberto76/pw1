@@ -1,21 +1,22 @@
 ---
 theme: default
 lineNumbers: true
-layout: intro
-title: PW1 - Aula 2 - HTML5
+layout: image-right
+image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+title: HTML5
 author: José Roberto Bezerra
 exportFilename: pw1_aula2_HTML5
 colorSchema: dark
 ---
 
-# Programação Web 1
-HTML5
+# {{ $slidev.configs.title }}
+Programação Web 1
 
 ---
 
 # Objetivos de aprendizagem
-Revisar os conceitos fundamentais do HTML<br>
-Conhecer as principais novidades do HTML5
+- Revisar os conceitos fundamentais do HTML
+- Conhecer as principais novidades do HTML5
 
 ---
 
@@ -92,8 +93,10 @@ small {
 ```
 
 ---
-
-![](./img/jens_kitchen2.png)
+image: /img/jens_kitchen2.png
+layout: image
+backgroundSize: contain
+---
 
 ---
 
@@ -104,10 +107,12 @@ small {
 - PNG, JPEG, SVG
 
 ---
+image: /img/myfirst_SVG.png
+layout: image-right
+backgroundSize: contain
+---
 
 # SVG
-
-![](./img/myfirst_SVG.png)
 
 ```html
 <html>
@@ -181,9 +186,7 @@ layout: section
 layout: section
 ---
 
-# HTML5 
-
-<logos-html-5 />
+# HTML5 <logos-html-5 />
 
 ---
 
@@ -383,13 +386,13 @@ layout: quote
 
 # Atributo `id`
 
-Especifica uma identificação **única** em um elemento HTML. Por exemplo, `<div id=button_send>`.
+> Especifica uma identificação **única** em um elemento HTML. Por exemplo, `<div id=button_send>`.
 
 ---
 
 # Atributo `class`
 
-Especifica uma classe para um elemento HTML. Por exemplo, `<div id=button_menu>`.
+> Especifica uma classe para um elemento HTML. Por exemplo, `<div id=button_menu>`.
 
 ---
 
@@ -407,17 +410,14 @@ layout: fact
 # Perguntas
 
 ---
-layout: section
+layout: fact
 ---
 
 # Exercícios
 
 ---
-layout: full
----
 
-# Exercício 1
-
+# 1
 Usando as ferramentas de medição de desempenho mostradas, carregue uma página com grande quantidade de elementos. Por exemplo, site de notícias, Youtube e similares.
 - Quanto tempo levou para carregar a página?
 - Quais os elementos que levaram mais tempo para carregar?
@@ -425,12 +425,11 @@ Usando as ferramentas de medição de desempenho mostradas, carregue uma página
 - Recarregue a página e observe quanto tempo leva o carregamento. Levou menos tempo?
 
 ---
-layout: full
----
 
-# Exercício 2 (Atividade Validação HTML5)
-
+# 2
 Use um dos validadores HTML5 para validar o site [https://www.monographcomms.ca/](https://www.monographcomms.ca/). Baixe o código fonte da página (Clique com botão direito em qualquer ponto da página e em seguida *View Page Source*). Faça alterações no código fonte da página para reduzir eventuais erros, avisos e informações tornando o arquivo compatível com HTML5. Faça *prints* do relatório do validador antes e depois das alterações. Poste os relatório na atividade Validação HTML5 no Google Classroom.
+
+(Atividade Validação HTML5)
 
 ---
 layout: fact
@@ -445,3 +444,7 @@ layout: fact
 - [Tutotial HTML MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [Tutorial SVG](https://www.w3schools.com/graphics/svg_intro.asp)
 - [W3C](https://www.w3.org/)
+
+---
+src: /src/end.md
+---

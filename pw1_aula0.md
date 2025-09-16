@@ -13,16 +13,12 @@ colorSchema: dark
 Programação Web 1
 
 ---
-layout:  default
----
 
 # Objetivos de Aprendizagem
 
 - Definir os conceitos gerais de PW
 - Apresentar a metodologia
 
----
-layout: default
 ---
 
 # Agenda
@@ -298,6 +294,7 @@ image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
 # {{ $slidev.configs.author }}
 jbroberto@ifce.edu.br<br><br>
 https://github.com/jbroberto76<br>
+https://github.com/pw1-repo<br>
 <br><br>
 <PoweredBySlidev />
 
