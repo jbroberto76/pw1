@@ -1,4 +1,4 @@
-![](/img/jose-campos-zRkBOOpKRhs-unsplash.jpeg)
+![](/img/cover_banner.jpg)
 
 # Programação Web 1
 José Roberto Bezerra
