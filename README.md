@@ -1,5 +1,7 @@
+![](/img/jose-campos-zRkBOOpKRhs-unsplash.jpeg)
+
 # Programação Web 1
-Prof. José Roberto Bezerra
+José Roberto Bezerra
 
 ## Aula 0
 
