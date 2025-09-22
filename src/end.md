@@ -1,14 +1,21 @@
 ---
 layout: image-right
+transition: fade
 backgroundSize: contain
 image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
 ---
 
 # {{ $slidev.configs.author }}
-jbroberto@ifce.edu.br
+
+<p>
+
+<mdi-email class="inline-block"/> [jbroberto@ifce.edu.br](jbroberto@ifce.edu.br)<br>
+
 <carbon-logo-github class="inline-block"/> [jbroberto76](https://github.com/jbroberto76)<br>
 
 <carbon-logo-github class="inline-block"/> [pw1-repo](https://github.com/pw1-repo)
+</p>
+
 <br>
 
 <br><br><br><br><br><br>

@@ -2,15 +2,17 @@
 theme: default
 lineNumbers: true
 layout: image-right
+transition: fade
 image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: HTML5
 author: José Roberto Bezerra
+description: Programação Web 1
 exportFilename: pw1_aula2_HTML5
 colorSchema: dark
 ---
 
 # {{ $slidev.configs.title }}
-Programação Web 1
+{{ $slidev.configs.description }}
 
 ---
 

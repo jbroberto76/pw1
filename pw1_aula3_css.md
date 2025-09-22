@@ -1,20 +1,24 @@
 ---
 theme: default
+transition: fade
 lineNumbers: true
-layout: intro
-title: PW1 - Aula 3 - CSS
+layout: image-right
+image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+title: Cascading Style Sheets
+description: Programação Web 1
 author: José Roberto Bezerra
 exportFilename: pw1_aula3_CSS
 colorSchema: dark
 ---
 
-# Programação Web 1
-*Cascading Style Sheets*
+# {{ $slidev.configs.title }}
+{{ $slidev.configs.description }}
 
 ---
 
 # Objetivo de aprendizagem
-Conhecer os princípios básicos do CSS3
+
+- Conhecer os princípios básicos do CSS3
 
 ---
 
@@ -27,7 +31,7 @@ Conhecer os princípios básicos do CSS3
 layout: section
 ---
 
-Por que CSS?
+# Por que CSS?
 
 ---
 
@@ -46,7 +50,7 @@ Por que CSS?
 layout: section
 ---
 
-Como CSS Funciona?
+# Como CSS Funciona?
 
 ---
 
@@ -97,14 +101,17 @@ Como CSS Funciona?
 - *Box Model*
 
 ---
+layout: image-right
+image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaPOgCM6b2jzCzWmv7XriVq-br2QID0gOHg4MSxRmCPi7PiF4S3jw7K92Fq53O-9dDxgttC3ektKC2a7KcbQqbDf3AvVyFlSgCvaNZ0kzXI_kmHiQMa9UOVTMp46i9k7IGFowjBSnYGoM/s400/Inheritance.png
+backgroundSize: contain
+---
 
 # Herança
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaPOgCM6b2jzCzWmv7XriVq-br2QID0gOHg4MSxRmCPi7PiF4S3jw7K92Fq53O-9dDxgttC3ektKC2a7KcbQqbDf3AvVyFlSgCvaNZ0kzXI_kmHiQMa9UOVTMp46i9k7IGFowjBSnYGoM/s400/Inheritance.png)
-
 ---
 
-# Conflitos (Precedência)
+# Conflitos
+Precedência
 
 - Podem existir conflitos em definições de estilo
 - As folhas de estilo possuem uma hierarquia para resolver tais conflitos:
@@ -158,7 +165,8 @@ p {
 
 ---
 
-# `padding` *Shorthands* (4 valores)
+# `padding`
+*Shorthands* (4 valores)
 
 ```css{*}{class: '!children:text-2xl'}
 padding: top right bottom left
@@ -173,7 +181,8 @@ blockquote {
 
 ---
 
-# `padding` *Shorthands* (3 valores)
+# `padding`
+*Shorthands* (3 valores)
 
 ```css{*}{class: '!children:text-2xl'}
 padding: top right+left bottom
@@ -188,7 +197,8 @@ blockquote {
 
 ---
 
-# `padding` *Shorthands* (2 valores)
+# `padding`
+*Shorthands* (2 valores)
 
 ```css{*}{class: '!children:text-2xl'}
 padding: top+bottom right+left
@@ -203,7 +213,8 @@ blockquote {
 
 ---
 
-# `padding` *Shorthands* (1 valor)
+# `padding`
+*Shorthands* (1 valor)
 
 ```css{*}{class: '!children:text-2xl'}
 padding: top+bottom+right+left
@@ -217,12 +228,12 @@ blockquote {
 ```
 
 ---
-layout: center
+layout: image-right
+image: https://i0.wp.com/onaircode.com/wp-content/uploads/2019/08/multiple-border-styles.png?w=871&ssl=1
+backgroundSize: contain
 ---
 
 # Estilos de borda
-
-![](https://i0.wp.com/onaircode.com/wp-content/uploads/2019/08/multiple-border-styles.png?w=871&ssl=1)
 
 ---
 layout: two-cols-header
@@ -256,7 +267,9 @@ p {
 }
 ```
 
-## Especifica `width`, `style` e `color`
+<br>
+
+> Especifica `width`, `style` e `color`
 
 ---
 
@@ -272,9 +285,11 @@ p {
 }
 ```
 
+<br>
+
 <v-click>
 
-## Disponíveis os *shorthands* de 4 valores até 1 valor
+> Disponíveis os *shorthands* de 4 valores até 1 valor
 
 </v-click>
 
@@ -283,7 +298,7 @@ p {
 # Propriedades para Fontes
 Exemplos
 
-```css{*}{class: '!children:text-2xl'}
+```css{*}{class: '!children:text-sm'}
 /* set the font size to 12px and line height to 14px and font family to sans-serif */
 p {
     font: 12px / 14px sans-serif;
@@ -308,7 +323,7 @@ p {
 # Propriedades para Fontes
 *Live Sample (Shorthand fonts)*
 
-![](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+[<logos-mdn />](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
 ---
 
@@ -360,7 +375,7 @@ Alternativa às WSF
 layout: section
 ---
 
-*Frameworks* CSS
+ # *Frameworks* CSS
 
 ---
 
@@ -447,3 +462,6 @@ Ver Quiz CSS na Aula 3.
 <!-- - [](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox#alignment_justification_and_distribution_of_free_space_between_items) -->
 <!-- - [](https://wpengine.com/resources/combine-flexbox-and-css-grids-for-layouts-how-to/) -->
 
+---
+src: /src/end.md
+---

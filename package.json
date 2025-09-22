@@ -10,9 +10,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@iconify-json/logos": "^1.2.9",
+    "@iconify-json/mdi": "^1.2.3",
     "playwright-chromium": "^1.51.1"
-  },
-  "dependencies": {
-    "@iconify-json/logos": "^1.2.9"
   }
 }
