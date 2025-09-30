@@ -40,7 +40,7 @@ Agenda
 - Como CSS funciona?
 - *Frameworks CSS*
 
-## Aula 4
+## Aula 4 - Bootstrap
 
 Objetivo de Aprendizagem
 - Trilhar os primeiros passos para utilização do *Framework* CSS Bootstrap
@@ -51,8 +51,17 @@ Agenda
 - Componentes
 - Repositório de exemplos
 
-## Aula 5
+## Aula 5 - NPM
 
+Objetivos de Aprendizagem
+- Utilizar o gerenciador de pacotes NPM
+- Identificar funções básicas do Express
+
+Agenda
+- Instalação Node.js
+- NPM
+- Módulos típicos
+- *Framework* Express
 
 ## Aula 6
 
