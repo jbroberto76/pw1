@@ -1,15 +1,18 @@
 ---
 theme: default
+transition: fade
 lineNumbers: true
-layout: cover
+layout: image-right
+image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: Templates
+description: Programação Web 1
 author: José Roberto Bezerra
 exportFilename: pw1_aula8_templates
 colorSchema: dark
 ---
 
-# Programação Web 1
-*Templates*
+# {{ $slidev.configs.title }}
+{{ $slidev.configs.description }}
 
 ---
 
@@ -38,22 +41,23 @@ layout: quote
 
 # O que são *Template Engines*?
 
-> *Template engines* são especialmente úteis em projetos que requerem a geração de HTML dinamicamente. Permitem que os desenvolvedores insiram dados em *templates* (modelos) pré-definidos, resultando em páginas web personalizadas e desenvolvidas rapidamente.
+> *Template engines* são especialmente úteis em projetos que requerem a geração de HTML **dinamicamente**. Permitem que os desenvolvedores insiram dados em *templates* (modelos) pré-definidos, resultando em páginas *web* personalizadas e desenvolvidas rapidamente.
 
 ---
 
 # Exemplos
 Com Express podem ser utilizados diversos TE.
 
-- [Pug](https://pugjs.org/api/getting-started.html)
-- [Handlebars](https://handlebarsjs.com/)
+- [Pug](https://pugjs.org/api/getting-started.html) <logos-pug />
+- [Handlebars](https://handlebarsjs.com/) <logos-handlebars />
 - [EJS](https://ejs.co/)
 
 ---
 
 # EJS
+Embedded JavaScript templating
 
-> EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.
+> *EJS is a simple templating language that lets you generate HTML markup with plain JavaScript*.
 
 ---
 layout: section
@@ -74,7 +78,7 @@ layout: section
 # Instalação
 EJS com Express Generator
 
-- `npm install express express-generator --view=ejs` (Rever Aula 7)
+- `npm install express express-generator` (Rever Aula 7)
 - Para utilizar o EJS com Express, bastam duas linhas de configuração no `app.js`:
 
 ```js {*}{class: '!children:text-lg'}
@@ -85,26 +89,23 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 ```
 
-- Observe que a linha 3 apenas é necessária caso o Express Generator seja utilizado
-
 ---
 
 # Instalação
 Sem Express Generator
 
 - Os *templates* devem estar em `/views`
-- Note que nas linhas 8 e 12 os caminhos são especificados a partir de `/views`
+- Note que nas linhas 5 e 9 os caminhos são especificados a partir de `/views`
 
-```js {5,9}{class: '!children:text-lg'}
+```js {4,8}{class: '!children:text-lg'}
 app.set('view engine', 'ejs');
-// res.render carrega o template ejs especificado
-// o uso da extensão é opcional
+// res.render carrega o template ejs especificado o uso da extensão é opcional
 app.get('/', function(req, res) {
-    res.render('pages/index');
+    res.render('index');
 });
 // about
 app.get('/about', function(req, res) {
-    res.render('pages/about');
+    res.render('about');
 });
 app.listen(8080);
 console.log('8080 is the magic port');
@@ -119,7 +120,7 @@ layout: two-cols-header
 ::left::
 
 - Todos os *templates* devem estar organizados em `/views`
-- É interessante organizar em subdiretórios para melhor organização. Por exemplo:
+- É interessante organizar em subdiretórios para melhor organização, como na figura
 
 ::right::
 
@@ -147,11 +148,11 @@ layout: two-cols-header
 
 - A palavra chave quando se usa *templates* é **REUTILIZAÇÃO**
 - O diretório `/partials` (sugestão de nome) deve conter tudo aquilo que for reutilizável:
-    - Cabeçalhos
-    - Rodapés
-    - Barras de menu
+    - Cabeçalhos (*headers*)
+    - Rodapés (*footers*)
+    - Barras de menu (*menu*)
     - *Sidebars*
-    - Anúncios
+    - Anúncios (*adbars*)
 
 ---
 layout: section
@@ -164,13 +165,12 @@ layout: section
 # Exemplo de aplicação
 
 1. Crie uma aplicação com Express Generator ou crie uma aplicação com a estrutura de arquivos e diretórios abaixo.
-    1. `npm init -y`
-    2. `npm install express express-generator`
-    3. `npx express-generator --view=ejs`
+    * `npm init -y`
+    * `npm install express express-generator`
 
 ```plantuml
 @startwbs
-*_ <&folder> ""myapp""
+*_ <&folder> ""app""
 **_ ""package.json""
 **_ ""app.js""
 **_ ""routes""
@@ -183,9 +183,28 @@ layout: section
 
 # Exemplo de aplicação
 
-2. Caso opte pelo EG toda a estrutura já será criada.
-3. Em `/partials` crie os arquivos `footer.ejs` e `header.ejs`
-4. Em `/views` crie o arquivo `magic.ejs`
+* Execute o EG
+  - `npx express-generator --view=ejs app`, caso o diretório `app` **não tenha sido criado**
+  - **OU** `npx express-generator --view=ejs`, caso o comando esteja sendo executado dentro do diretório (**já criado**) da aplicação
+
+```plantuml
+@startwbs
+*_ <&folder> ""app""
+**_ ""package.json""
+**_ ""app.js""
+**_ ""routes""
+**_ ""views""
+***_ <&folder> ""partials""
+@endwbs
+```
+
+---
+
+# Exemplo de aplicação
+
+2. Caso opte pelo EG a estrutura base já será criada.
+3. Em `/views` crie o diretório `/partials`
+4. Em `/partials` crie os arquivos `footer.ejs` e `header.ejs` (a seguir)
 
 ---
 
@@ -216,11 +235,13 @@ layout: section
 # `footer.ejs`
 
 ```html {*}{class: '!children:text-lg'}
-<div class="ui inverted footer">
+<footer>
+  <div class="ui inverted footer">
    <div class="ui container">
      Topcoder 2021. All Rights Reserved
    </div>
-</div>
+  </div>
+</footer>
 ```
 
 
@@ -230,9 +251,9 @@ layout: section
 Como usar as partials?
 
 5. Para inserir o `header.ejs` na *view* (Linha 1) em `index.ejs` 
-6. Para inserir o `footer.ejs` na *view* (Linha 10)
+6. Para inserir o `footer.ejs` na *view* (Linha 8)
 
-```js {*}{class: '!children:text-lg'}
+```js {1,8}{class: '!children:text-lg'}
 <%- include('./partials/header') %>
   <main>
     <div class="ui segment">
@@ -240,11 +261,7 @@ Como usar as partials?
       <p>This is the INDEX route</p>
     </div>
   </main>
-
-  <footer>
-    <%- include('./partials/footer') %>
-  </footer>
-
+  <%- include('./partials/footer') %>
   </body>
 </html>
 ```
@@ -252,6 +269,8 @@ Como usar as partials?
 ---
 
 # `magic.ejs` 
+
+7. Em `/views` crie o arquivo `magic.ejs`
 
 ```js {*}{class: '!children:text-lg'}
 <%- include('./partials/header') %>
@@ -261,11 +280,7 @@ Como usar as partials?
       <p>This is a magic route</p>
     </div>
   </main>
-
-  <footer>
-    <%- include('./partials/footer') %>
-  </footer>
-
+  <%- include('./partials/footer') %>
   </body>
 </html>
 ```
@@ -274,7 +289,7 @@ Como usar as partials?
 
 # Exemplo de aplicação
 
-7. Em `/routes` criar o arquivo `magic.js`
+8. Em `/routes` criar o arquivo `magic.js`
 
 ```js {*}{class: '!children:text-lg'}
 var express = require('express')
@@ -291,7 +306,7 @@ module.exports = router;
 
 # Exemplo de aplicação
 
-8. Incluir a rota `/magic` em `app.js`
+9. Incluir a rota `/magic` em `app.js` nas linhas indicadas
 
 ```js {*}{class: '!children:text-lg', startLine: 9}
 var magicRouter = require('./routes/magic')
@@ -301,7 +316,7 @@ var magicRouter = require('./routes/magic')
 app.use('/magic', magicRouter)
 ```
 
-9. Teste todas as rotas
+10. Teste todas as rotas
 
 ---
 
@@ -352,8 +367,5 @@ Refazer o exercício #3 da Aula 7 (Atividade Router) adicionando um *template* p
 - [Using EJS Template Engine With Express.js](https://www.topcoder.com/thrive/articles/using-ejs-template-engine-with-express-js)
 
 ---
-layout: end
+src: /src/end.md
 ---
-
-# Prof. José Roberto Bezerra
-jbroberto@ifce.edu.br

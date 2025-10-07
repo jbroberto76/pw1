@@ -1,10 +1,16 @@
 .slidev-layout {
-    p {
+    p, ul, ol {
       font-size: 24px
     }
   
-    ul, ol {
-      font-size: 24px
+    strong {
+      color: #bc2222;
+    }
+
+    blockquote {
+      border-left: 4px solid #bc2222;
+      padding-left: 1em;
+      margin: 3em 0em;
     }
   }
 
