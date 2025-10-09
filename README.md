@@ -98,9 +98,10 @@ Agenda
 - Instalação
 - Exemplo de aplicação com EJS
 
-## Aula 9
+### Aula 9 - MongoDB
+
 Objetivos de aprendizagem
-- Conhecer o conceito de bancos de dados NoSQL
+- Diferenciar bancos de dados NoSQL e SQL
 - Iniciar a utilização do MongoDB
 - Criar conta MongoDB Atlas
 
@@ -109,7 +110,7 @@ Agenda
 - MongoDB
 - CRUD
 
-## Aula 10
+### Aula 10
 Objetivo de Aprendizagem
 - Aplicar o MongoDB juntamente com Nodejs
 

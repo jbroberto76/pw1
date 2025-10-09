@@ -1,20 +1,24 @@
 ---
 theme: default
+transition: fade
 lineNumbers: true
-layout: cover
-title: Templates
+layout: image-right
+image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+title: MongoDB
+description: Programação Web 1
 author: José Roberto Bezerra
 exportFilename: pw1_aula9_MDB
 colorSchema: dark
 ---
 
-# Programação Web 1
-*MongoDB* <logos-mongodb />
+
+# {{ $slidev.configs.title }} <logos-mongodb-icon />
+{{ $slidev.configs.description }}
 
 ---
 
 # Objetivos de aprendizagem
-- Conhecer o conceito de bancos de dados NoSQL
+- Diferenciar bancos de dados NoSQL e SQL
 - Iniciar a utilização do MongoDB
 - Criar conta MongoDB Atlas
 
@@ -68,10 +72,12 @@ Quando usar SQL?
 ---
 
 # NoSQL
+*Not only SQL*
 
-- *Not only SQL*
 - Desenvolvido na década de 1990, mas evidenciado em 2000 com a evolução da Computação em Nuvem, Internet, uso de dispositivos móveis e similares
 - Surgiu da necessidade de bancos de dados com menores restrições e mais escaláveis
+
+[NoSQL Oracle Brasil](https://www.oracle.com/br/database/nosql/what-is-nosql/)
 
 ---
 
@@ -107,27 +113,27 @@ layout: two-cols-header
 
 :: left ::
 
-**SQL**
+SQL
 - Oracle <logos-oracle />
 - PostgreSQL <logos-postgresql />
-- MySQL <logos-mysql />
+- MySQL <logos-mysql-icon />
 - SQLite <logos-sqlite />
 
 :: right ::
 
-**NoSQL**
+NoSQL
 - Redis <logos-redis />
 - Fauna <logos-fauna />
-- CouchDB <logos-couchdb />
+- CouchDB <logos-couchdb-icon />
 - Cassandra <logos-cassandra />
 - Elasticsearch <logos-elasticsearch />
-- MongoDB <logos-mongodb />
+- MongoDB <logos-mongodb-icon />
 
 ---
 layout: section
 ---
 
-# MongoDB
+# MongoDB <logos-mongodb-icon />
 
 ---
 layout: quote
@@ -135,27 +141,29 @@ layout: quote
 
 > "MongoDB is an open source, nonrelational database management system (DBMS) that uses flexible documents instead of tables and rows to process and store various forms of data."
 
-Fonte: [MongoDB](https://www.mongodb.com/pt-br/what-is-mongodb)
+[What is MongoDB?](https://www.mongodb.com/pt-br/what-is-mongodb)
 
 ---
 
 # Características
 
-- Unidade básica de dado consiste em documentos ou coleções de documentos
+- Unidade básica de dado consiste em **documentos**
+- Os documentos são agrupados em **coleções**
 - Formatação básica em **JSON**
 - Flexibilidade total na criação/consulta dos registros
 - Confiável
 - Altamente escalável
 
 > "A JSON object is an unordered set of name/value pairs..."
-Fonte: [JSON.org](https://www.json.org/json-en.html)
+
+[JSON.org](https://www.json.org/json-en.html)
 
 ---
 
 # Base de documentos
 
 - Um registro é chamado de **documento**
-- Os documentos são estruturados em pares campo/valor, similar a JSON
+- Os documentos são estruturados em pares campo/valor, JSON
 
 ```json {*}{class: '!children:text-lg'}
 {
@@ -171,12 +179,13 @@ Fonte: [JSON.org](https://www.json.org/json-en.html)
 # Por que utilizar documentos?
 
 - Correspondem aos dados nativos utilizados nas linguagens, facilmente processáveis
+- Favilitam a interoperabilidade
 - Polimorfismo de dados é facilitado
-- Reduzem a necessidade de joins de alto custo computacional
+- Reduzem a necessidade de *joins* de alto custo computacional
 
 ---
 
-# Estrutura de documentos
+# Estrutura de Documentos
 
 - Os nomes de campos são `strings`
 - Os valores podem assumir diversos tipos, inclusive outros documentos e `arrays` de documentos
@@ -195,7 +204,7 @@ var mydoc = {
 
 ---
 
-# Estrutura de documentos
+# Estrutura de Documentos
 
 ```json {*}{class: '!children:text-lg'}
 {
@@ -219,20 +228,20 @@ var mydoc = {
 ---
 
 # BSON Types
-
 Formato Binário de Serialização
+
 
 [Referência BSON](https://www.mongodb.com/docs/manual/reference/bson-types/)
 
 ---
 
-# ObjectId
+# `ObjectId`
 
 - MongoDB requer que cada documento de uma coleção possua um campo `_id` único que funciona como chave primária
 - Se omitido, é gerado automaticamente
 - `_id` é um nome de campo reservado, não pode ser atribuído a nenhum outro campo
 
-```js {2}{class: '!children:text-lg'}
+```js {2}{class: '!children:text-sm'}
 var mydoc = {
     _id: ObjectId("37238237"),
     name: {first: "Allan", last: "Turing"},
@@ -280,17 +289,17 @@ layout: section
 
 # CRUD
 
-- **Create**
-- **Read**
-- **Update**
-- **Delete**
+- Create
+- Read
+- Update
+- Delete
 
 ---
 
 # Create
 `insertOne()`
 
-```js {*}{class: '!children:text-2lg'}
+```js {*}{class: '!children:text-xl'}
 db.student.insertOne(
     {
         Name: "Akshay", 
@@ -303,7 +312,7 @@ db.student.insertOne(
 # Create
 `insertMany()`
 
-```js {*}{class: '!children:text-2lg'}
+```js {*}{class: '!children:text-xl'}
 db.student.insertMany(
     [
         {name:"Ajay", age:20},
@@ -317,7 +326,7 @@ db.student.insertMany(
 # Read
 `find()`
 
-```js {*}{class: '!children:text-2lg'}
+```js {*}{class: '!children:text-xl'}
 db.users.find(
     {age: {$gt: 18}},
     {name: 1, address: 1}
@@ -329,7 +338,7 @@ db.users.find(
 # Read
 Exemplos
 
-```js {*}{class: '!children:text-2lg'}
+```js {*}{class: '!children:text-xl'}
 db.inventory.find({})
 db.inventory.find({ status: "D" })
 db.inventory.find({ $or: [ { status: "A" }, { qty: { $lt: 30 } } ] })
@@ -337,7 +346,7 @@ db.inventory.find({ $or: [ { status: "A" }, { qty: { $lt: 30 } } ] })
 
 Equivalente SQL:
 
-```sql {*}{class: '!children:text-2lg'}
+```sql {*}{class: '!children:text-xl'}
 SELECT * FROM inventory
 SELECT * FROM inventory WHERE status = "D"
 SELECT * FROM inventory WHERE status = "A" OR qty < 30
@@ -347,7 +356,7 @@ SELECT * FROM inventory WHERE status = "A" OR qty < 30
 
 # Update
 
-```js {*}{class: '!children:text-2lg'}
+```js {*}{class: '!children:text-xl'}
 db.collection.updateOne(<filter>, <update>, <options>)
 db.collection.updateMany(<filter>, <update>, <options>)
 db.collection.replaceOne(<filter>, <update>, <options>)
@@ -357,7 +366,7 @@ db.collection.replaceOne(<filter>, <update>, <options>)
 
 # Delete
 
-```js {*}{class: '!children:text-2lg'}
+```js {*}{class: '!children:text-xl'}
 db.collection.deleteMany()
 db.collection.deleteOne()
 ```
@@ -383,9 +392,9 @@ Seguir o tutorial: [MongoDB Getting Started](https://www.mongodb.com/docs/v7.0/t
 
 # 2
 Criar conta MongoDB Atlas usando o email institucional através do link abaixo. 
-<br><br><br>
+
 [Create Your Account](https://account.mongodb.com/account/register)
-<br><br><br>
+
 > "MongoDB Atlas is a multi-cloud database service..."
 
 [MongoDB Atlas Docs](https://www.mongodb.com/docs/atlas/)
@@ -396,7 +405,7 @@ Criar conta MongoDB Atlas usando o email institucional através do link abaixo.
 Configurar sua conta no MongoDB Atlas.
 
 1. Criar conta (já feito no exercício anterior)
-2. Implantar cluster gratuito
+2. Implantar *cluster* gratuito
 3. Configurar IP para acesso
 4. Configurar senha de acesso
 5. Identificar sua *connection string*
@@ -423,7 +432,9 @@ Despois de criada a conta, execute os passos a seguir.
 1. Criar banco de dados `db`
 2. Adicionar coleção `restaurants`
 3. Importar `restaurants.json` (Ver Google Classroom da Aula 9)
-4. Após importar `restaurants.json`, resolver os exercícios: [MongoDB Exercises](https://www.w3resource.com/mongodb-exercises/)
+    - Via `mongosh` ou via MongoDB Compass
+4. Após importar `restaurants.json`, resolver os exercícios:
+    - [MongoDB Exercises](https://www.w3resource.com/mongodb-exercises/)
 
 ---
 
@@ -444,10 +455,5 @@ Despois de criada a conta, execute os passos a seguir.
 - [JSON.org](https://www.json.org/json-en.html)
 
 ---
-layout: end
+src: /src/end.md
 ---
-
-# Prof. José Roberto Bezerra
-jbroberto@ifce.edu.br
-<br><br>
-<PoweredBySlidev />
