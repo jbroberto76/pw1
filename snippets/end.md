@@ -2,7 +2,7 @@
 layout: image-right
 transition: fade
 backgroundSize: contain
-image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 ---
 
 # {{ $slidev.configs.author }}

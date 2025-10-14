@@ -3,14 +3,13 @@ theme: default
 transition: fade
 lineNumbers: true
 layout: image-right
-image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: MongoDB
 description: Programação Web 1
 author: José Roberto Bezerra
 exportFilename: pw1_aula9_MDB
 colorSchema: dark
 ---
-
 
 # {{ $slidev.configs.title }} <logos-mongodb-icon />
 {{ $slidev.configs.description }}
@@ -455,5 +454,5 @@ Despois de criada a conta, execute os passos a seguir.
 - [JSON.org](https://www.json.org/json-en.html)
 
 ---
-src: /src/end.md
+src: /snippets/end.md
 ---

@@ -1,15 +1,18 @@
 ---
 theme: default
+transition: fade
 lineNumbers: true
-layout: cover
+layout: image-right
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: Rotas com Express
+description: Programação Web 1
 author: José Roberto Bezerra
 exportFilename: pw1_aula7_router
 colorSchema: dark
 ---
 
-# Programação Web 1
-Rotas com Express
+# {{ $slidev.configs.title }}
+{{ $slidev.configs.description }}
 
 ---
 
@@ -420,8 +423,5 @@ Refazer o exercício da Aula 6 (Express) utilizando agora um `router`. Opcionalm
 - [Express Static Files](https://expressjs.com/en/starter/static-files.html)
 
 ---
-layout: end
+src: /snippets/end.md
 ---
-
-# Prof. José Roberto Bezerra
-jbroberto@ifce.edu.br

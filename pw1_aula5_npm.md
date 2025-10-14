@@ -3,7 +3,7 @@ theme: default
 transition: fade
 lineNumbers: true
 layout: image-right
-image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: Node Package Manager
 description: Programação Web 1
 author: José Roberto Bezerra
@@ -468,5 +468,5 @@ layout: default
 - [Express](https://expressjs.com/)
 
 ---
-src: /src/end.md
+src: /snippets/end.md
 ---

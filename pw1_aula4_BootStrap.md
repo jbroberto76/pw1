@@ -1,15 +1,19 @@
 ---
 theme: default
+transition: fade
 lineNumbers: true
-layout: intro
-title: PW1 - Aula 4 - Bootstrap
+layout: image-right
+image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+title: Bootstrap
+description: Programação Web 1
 author: José Roberto Bezerra
 exportFilename: pw1_aula4_Bootstrap
 colorSchema: dark
 ---
 
-# Programação Web 1
-**Bootstrap** <logos-bootstrap />
+# {{ $slidev.configs.title }}
+{{ $slidev.configs.description }}
+<logos-bootstrap />
 
 ---
 
@@ -440,11 +444,5 @@ Modifique o *design* do exercício anterior adicionando os seguintes elementos:
 - https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/
 
 ---
-layout: center
+src: /snippets/end.md
 ---
-
-FIM
-
-<PoweredBySlidev />
-
-

@@ -3,7 +3,7 @@ theme: default
 lineNumbers: true
 layout: image-right
 transition: fade
-image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: HTML5
 author: José Roberto Bezerra
 description: Programação Web 1
@@ -35,7 +35,7 @@ layout: section
 
 ---
 
-![](./img/jens_kitchen.png)
+![](/jens_kitchen.png)
 
 ---
 
@@ -95,7 +95,7 @@ small {
 ```
 
 ---
-image: /img/jens_kitchen2.png
+image: /jens_kitchen2.png
 layout: image
 backgroundSize: contain
 ---
@@ -109,7 +109,7 @@ backgroundSize: contain
 - PNG, JPEG, SVG
 
 ---
-image: /img/myfirst_SVG.png
+image: /myfirst_SVG.png
 layout: image-right
 backgroundSize: contain
 ---
@@ -448,5 +448,5 @@ layout: fact
 - [W3C](https://www.w3.org/)
 
 ---
-src: /src/end.md
+src: /snippets/end.md
 ---

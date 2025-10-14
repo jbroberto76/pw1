@@ -3,7 +3,7 @@ theme: default
 transition: fade
 lineNumbers: true
 layout: image-right
-image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: Templates
 description: Programação Web 1
 author: José Roberto Bezerra
@@ -367,5 +367,5 @@ Refazer o exercício #3 da Aula 7 (Atividade Router) adicionando um *template* p
 - [Using EJS Template Engine With Express.js](https://www.topcoder.com/thrive/articles/using-ejs-template-engine-with-express-js)
 
 ---
-src: /src/end.md
+src: /snippets/end.md
 ---

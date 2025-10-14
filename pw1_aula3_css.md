@@ -3,7 +3,7 @@ theme: default
 transition: fade
 lineNumbers: true
 layout: image-right
-image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: Cascading Style Sheets
 description: Programação Web 1
 author: José Roberto Bezerra
@@ -463,5 +463,5 @@ Ver Quiz CSS na Aula 3.
 <!-- - [](https://wpengine.com/resources/combine-flexbox-and-css-grids-for-layouts-how-to/) -->
 
 ---
-src: /src/end.md
+src: /snippets/end.md
 ---

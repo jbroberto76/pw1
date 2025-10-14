@@ -2,15 +2,16 @@
 theme: default
 lineNumbers: true
 layout: image-right
-image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: Aula Zero
+description: Programação Web 1
 author: José Roberto Bezerra
 exportFilename: pw1_aula0
 colorSchema: dark
 ---
 
 # {{ $slidev.configs.title }}
-Programação Web 1
+{{ $slidev.configs.description }}
 
 ---
 
@@ -286,16 +287,5 @@ layout: fact
 - [Stack Overflow 2025 Survey](https://survey.stackoverflow.co/2025/)
 
 ---
-layout: image-right
-backgroundSize: contain
-image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+src: /snippets/end.md
 ---
-
-# {{ $slidev.configs.author }}
-jbroberto@ifce.edu.br<br><br>
-https://github.com/jbroberto76<br>
-https://github.com/pw1-repo<br>
-<br><br>
-<PoweredBySlidev />
-
-#### Foto by [José Campos](https://unsplash.com/pt-br/@frank_barezi) from [Unsplash](https://unsplash.com/pt-br/)

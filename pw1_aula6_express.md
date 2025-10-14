@@ -1,15 +1,18 @@
 ---
 theme: default
+transition: fade
 lineNumbers: true
-layout: cover
+layout: image-right
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: Express Framework
+description: Programação Web 1
 author: José Roberto Bezerra
 exportFilename: pw1_aula6_express
 colorSchema: dark
 ---
 
-# Programação Web 1
-**Express**
+# {{ $slidev.configs.title }}
+{{ $slidev.configs.description }}
 
 ---
 
@@ -398,8 +401,5 @@ que recebe o `userid` do usuário e exibe na página uma msg de boas vindas usan
 - [Express JS Tutorial](https://www.tutorialspoint.com/expressjs/index.htm)
 
 ---
-layout: end
+src: /snippets/end.md
 ---
-
-# Prof. José Roberto Bezerra
-jbroberto@ifce.edu.br
