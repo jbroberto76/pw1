@@ -392,13 +392,13 @@ layout: fact
 
 # 1
 
-Modificar a v1 API Hello de forma seja exibido um log de saída no console com o seguinte formato: data/hota, endpoint, saída (JSON).
+Modificar a v1 da API Hello de forma seja exibido um *log* de saída no console com o seguinte formato: `data/hota, endpoint, saída (JSON)`.
 
 ---
 
 # 2
 
-Criar a versão 2 (v2) da API Hello de forma que as mensagens seja exibidas em 3 idiomas diferentes (pt-br, es, en). A opção do idioma pode ser passada através da URL e também através do formulário. As duas versões da API devem ficar disponíveis para o usuário.
+Criar a versão 2 (v2) da API Hello de forma que as mensagens sejam exibidas em 3 idiomas diferentes (pt-br, es, en). A opção do idioma é passada através da URL e também através do formulário. As duas versões da API devem ficar disponíveis para o usuário.
 
 ---
 
