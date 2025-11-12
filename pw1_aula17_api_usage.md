@@ -1,15 +1,18 @@
 ---
 theme: default
+transition: fade
 lineNumbers: true
-layout: cover
-title: Cosumindo APIs de Terceiros
+layout: image-right
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
+title: Consumindo APIs de Terceiros
+description: Programação Web 1
 author: José Roberto Bezerra
-exportFilename: pw1_aula13_usage
+exportFilename: pw1_aula17_api_usage
 colorSchema: dark
 ---
 
-# Programação Web 1
-Cosumindo APIs de Terceiros
+# {{ $slidev.configs.title }}
+{{ $slidev.configs.description }}
 
 ---
 
@@ -92,7 +95,7 @@ const axios = require('axios');
 ---
 
 # Axios
-GET usando Promise
+GET usando *promise chain*
 
 ```js {*}{class: '!children:text-xl'}
 // Make a request for a user with a given ID
@@ -113,7 +116,7 @@ axios.get('/user?ID=12345')
 ---
 
 # Axios 
-GET com Promise e `params`
+GET com promise e `params`
 
 ```js {*}{class: '!children:text-xl'}
 axios.get('/user', {
@@ -190,10 +193,10 @@ layout: section
 # Consumindo a API Hello
 
 ---
-layout: statement
+layout: quote
 ---
 
-# A ideia é criar a aplicação `HelloApp` que utiliza ou aplica ou consome os recursos da `API Hello` criada na aula anterior.
+> A ideia é criar a aplicação `HelloApp` que utiliza ou aplica ou consome os recursos da `API Hello` criada na aula anterior.
 
 ---
 
@@ -250,7 +253,7 @@ app.listen(PORT, () => {
 app.use(express.urlencoded({ extended: true }))
 // URL da API
 const API_URL = 
-'https://potential-trout-6xgrr4rwwvxh5rrw-8000.app.github.dev' 
+'https://orange-fiesta-9vg5wp94jvc7r67-8000.app.github.dev/' 
 ```
 
 **Sugestão**: Usar a API Hello através do GitHub Codespaces.
@@ -357,7 +360,7 @@ Adicionando os *templates* em `/views`
 
 ---
 layout: image-right
-image: ./img/HelloAppForm.png
+image: /HelloAppForm.png
 backgroundSize: contain
 ---
 
@@ -431,7 +434,7 @@ app.post('/whobypost', (req, res) => {
 - Existem diversos repositórios de APIs públicas que podem ser utilizadas em projetos
 - Existem também APIs pagas
 - Seguem alguns exemplos de respositórios de APIs públicas:
-  - [A directory of free and public apis](https://publicapis.io/)
+  - [A directory of free and public APIs](https://publicapis.io/)
   - [<logos-postman /> Public REST APIs](https://www.postman.com/cs-demo/public-rest-apis/overview)
 
 ---
@@ -444,7 +447,7 @@ layout: fact
 
 # 1
 
-Criar uma aplicação Mensagem do Dia que consome a API [Ron Swanson Quotes](https://www.postman.com/cs-demo/public-rest-apis/request/uc3wcpm/ron-swanson-quotes). Utilize Express, Bootstrap e EJS. Ferramentas alternativas podem ser aplicadas.
+Criar a aplicação Mensagem do Dia que consome a API [Ron Swanson Quotes](https://www.postman.com/cs-demo/public-rest-apis/request/uc3wcpm/ron-swanson-quotes). Utilize Express, Bootstrap e EJS. Ferramentas alternativas podem ser aplicadas.
 
 ---
 
@@ -452,13 +455,8 @@ Criar uma aplicação Mensagem do Dia que consome a API [Ron Swanson Quotes](htt
 - [mdn web docs Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [API Ron Swanson Quotes](https://www.postman.com/cs-demo/public-rest-apis/request/uc3wcpm/ron-swanson-quotes)
 - [<logos-git-icon /> API Hello](https://github.com/pw1-repo/apihello.git)
-- [<logos-git-icon /> HelloAPP](hhttps://github.com/pw1-repo/helloAPP.git)
+- [<logos-git-icon /> HelloAPP](https://github.com/pw1-repo/helloAPP.git)
 
 ---
-layout: end
+src: /snippets/end.md
 ---
-
-# Prof. José Roberto Bezerra
-jbroberto@ifce.edu.br
-<br><br>
-<PoweredBySlidev />

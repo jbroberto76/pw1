@@ -1,4 +1,4 @@
-![](/img/cover_banner.jpg)
+``![](/img/cover_banner.jpg)
 
 # Programação Web 1
 José Roberto Bezerra
@@ -119,12 +119,12 @@ Agenda
 - *Connection Guide*
 - Cursor
 
-## Aula 11
+### Aula 11
 
 *Source Code*
 [contactsDAO](https://github.com/pw1-repo/contactsDAO.git)
 
-## Aula 12
+### Aula 16
 
 Objetivos de Aprendizagem
 - Conhecer o conceito de API
@@ -139,7 +139,7 @@ Agenda
 *Source Code*
 [API Hello](https://github.com/pw1-repo/apihello.git)
 
-## Aula 13
+### Aula 17
 
 Objetivo de Aprendizagem
 - Aplicar APIs de terceiros em projetos próprios
@@ -151,7 +151,7 @@ Agenda
 *Source Code*
 [HelloAPP](https://github.com/pw1-repo/helloAPP.git)
 
-## Aula 14
+## Aula 18 
 
 Objetivo de Aprendizagem
 - Aprofundar o conhecimento sobre APIs

@@ -1,15 +1,18 @@
 ---
 theme: default
+transition: fade
 lineNumbers: true
-layout: cover
+layout: image-right
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: API Keys
+description: Programação Web 1
 author: José Roberto Bezerra
-exportFilename: pw1_aula14_api_keys
+exportFilename: pw1_aula18_api_keys
 colorSchema: dark
 ---
 
 # {{ $slidev.configs.title }}
-Programação Web 1
+{{ $slidev.configs.description }}
 
 ---
 
@@ -33,7 +36,7 @@ layout: section
 
 # O que são API Keys?
 
-- Trata-se de um **token de autenticação** usado para identificar quem está acessando umaa API
+- Trata-se de um **token de autenticação** usado para identificar quem está acessando uma API
 - Pode controlar:
   - Limites de uso (*rate limits*)
   - Permissões de acesso
@@ -43,7 +46,7 @@ layout: section
 
 # Onde são usadas?
 
-- APIs públicas ou semi-públicas
+- APIs públicas ou semi-públicas ou abertas
 - Integrações entre sistemas
 - Exemplos:
   - Google Maps API
@@ -114,7 +117,8 @@ Documentação
 - As informações são retornadas no formato JSON
 - Todas as requisições são feitas através do método GET
 - Não utiliza chaves
-[Documentação da API](https://finalspaceapi.com/docs/)
+
+[Documentação da API Final Space](https://finalspaceapi.com/docs/)
 
 ---
 
@@ -143,7 +147,7 @@ layout: section
  - 50 requisições por IP por dia
 - *Web Service Rate Limits*
   - 1000 requisições por hora
-- Para checagem da utilização AP ver os cabeçalhos HTTP:
+- Para checagem da utilização, ver os cabeçalhos HTTP:
   - `X-RateLimit-Limit`
   - `X-RateLimit-Remaining`
 
@@ -164,7 +168,9 @@ layout: fact
 
 # 1
 
-Criar uma aplicação que utiliza NASA APIs APOD para buscar *links* de imagens que contenham um astro específico passado pelo usuário e que não tenha *copyright*. A aplicação deve exibir as imagens em um carrosel. **Sugestão**: Crie uma chave de API no site para melhor utilização dos recursos.
+Criar uma aplicação que utiliza NASA APIs APOD para buscar *links* de imagens que contenham um astro específico passado pelo usuário e que não tenha *copyright*. A aplicação deve exibir as imagens em um carrosel.
+
+> **Sugestão**: Crie uma chave de API no site para melhor utilização dos recursos.
 
 [Generate API Key](https://api.nasa.gov/#:~:text=Overview-,Generate%20API%20Key,-Authentication)
 
@@ -176,10 +182,5 @@ Criar uma aplicação que utiliza NASA APIs APOD para buscar *links* de imagens 
 
 
 ---
-layout: end
+src: /snippets/end.md
 ---
-
-# Prof. {{ $slidev.configs.author }}
-jbroberto@ifce.edu.br
-<br><br>
-<PoweredBySlidev />
