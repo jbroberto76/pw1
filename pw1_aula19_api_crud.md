@@ -1,16 +1,18 @@
 ---
 theme: default
+transition: fade
 lineNumbers: true
 layout: image-right
-image: ./img/jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
 title: API + CRUD
+description: Programação Web 1
 author: José Roberto Bezerra
-exportFilename: pw1_aula15_api_crud
+exportFilename: pw1_aula19_api_crud
 colorSchema: dark
 ---
 
 # {{ $slidev.configs.title }}
-Programação Web 1
+{{ $slidev.configs.description }}
 
 ---
 
@@ -174,21 +176,11 @@ layout: fact
 
 # 1
 
-Criar uma aplicação que utiliza NASA APIs APOD para buscar *links* de imagens que contenham um astro específico passado pelo usuário e que não tenha *copyright*. A aplicação deve exibir as imagens em um carrosel. **Sugestão**: Crie uma chave de API no site para melhor utilização dos recursos.
-
-[Generate API Key](https://api.nasa.gov/#:~:text=Overview-,Generate%20API%20Key,-Authentication)
 
 ---
 
 # Referências
-- [Final Space API](https://finalspaceapi.com/)
-- [NASA Open API](https://api.nasa.gov/)
 
 ---
-layout: end
+src: /snippets/end.md
 ---
-
-# Prof. {{ $slidev.configs.author }}
-jbroberto@ifce.edu.br
-<br><br>
-<PoweredBySlidev />
