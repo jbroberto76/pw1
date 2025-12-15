@@ -110,7 +110,7 @@ Agenda
 - MongoDB
 - CRUD
 
-### Aula 10
+### Aula 10 - MongoDB + Nodejs
 Objetivo de Aprendizagem
 - Aplicar o MongoDB juntamente com Nodejs
 
@@ -119,12 +119,12 @@ Agenda
 - *Connection Guide*
 - Cursor
 
-### Aula 11
+### Aula 11 - Data Access Object
 
 *Source Code*
 [contactsDAO](https://github.com/pw1-repo/contactsDAO.git)
 
-### Aula 16
+### Aula 16 - APIs
 
 Objetivos de Aprendizagem
 - Conhecer o conceito de API
@@ -139,7 +139,7 @@ Agenda
 *Source Code*
 [API Hello](https://github.com/pw1-repo/apihello.git)
 
-### Aula 17
+### Aula 17 - Consumindo APIs
 
 Objetivo de Aprendizagem
 - Aplicar APIs de terceiros em projetos próprios
@@ -151,7 +151,7 @@ Agenda
 *Source Code*
 [HelloAPP](https://github.com/pw1-repo/helloAPP.git)
 
-## Aula 18 
+### Aula 18 - API Keys
 
 Objetivo de Aprendizagem
 - Aprofundar o conhecimento sobre APIs
@@ -161,7 +161,7 @@ Agenda
 - *Final Space* API
 - *NASA Open* API
 
-## Aula 15 (INCOMPLETA)
+### Aula 19 (INCOMPLETA)
 Objetivo de Aprendizagem
 - Construir uma API com acesso a bancos de dados
 
