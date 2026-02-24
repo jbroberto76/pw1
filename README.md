@@ -3,12 +3,12 @@
 # Programação Web 1
 José Roberto Bezerra
 
-## Aula 0
+### Aula 0
 
 Objetivos de Aprendizagem
 
 - Definir os conceitos gerais de PW
-- Apresentar a metodologia
+- Conhecer a metodologia da disciplina
 
 Agenda
 
@@ -16,10 +16,10 @@ Agenda
 - Conceitos e Tecnologias
 - Metodologia
 
-## Aula 1 - Planejamento de *Layout*
+### Aula 1 - Planejamento de *Layout*
 
 
-## Aula 2 - HTML5
+### Aula 2 - HTML5
 
 Objetivo de aprendizagem
 - Revisar os conceitos fundamentais do HTML
@@ -123,6 +123,9 @@ Agenda
 
 *Source Code*
 [contactsDAO](https://github.com/pw1-repo/contactsDAO.git)
+
+### Aulas 12 a 15 - contactsApp
+
 
 ### Aula 16 - APIs
 

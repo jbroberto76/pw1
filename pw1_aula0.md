@@ -1,13 +1,14 @@
 ---
 theme: default
+transition: fade
+colorSchema: dark
 lineNumbers: true
-layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
-title: Aula Zero
+layout: image
+image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
+title: Aula Zero
 exportFilename: pw1_aula0
-colorSchema: dark
 ---
 
 # {{ $slidev.configs.title }}
@@ -18,7 +19,7 @@ colorSchema: dark
 # Objetivos de Aprendizagem
 
 - Definir os conceitos gerais de PW
-- Apresentar a metodologia
+- Conhecer a metodologia da disciplina
 
 ---
 
@@ -32,13 +33,13 @@ colorSchema: dark
 layout: section
 ---
 
-# **Conceitos de PW**
+# Conceitos de PW
 
 ---
 layout: quote
 ---
 
-> **Desenvolvimento Web** (Programação Web) é o processo aplicações (*sites*) utilizando tecnologias implantadas em servidores remotos acessíveis através da Internet.
+> **Desenvolvimento Web** (Programação Web) é o processo de construir aplicações (*sites*) utilizando tecnologias implantadas em servidores remotos acessíveis através da Internet.
 
 ---
 layout: image
@@ -60,9 +61,9 @@ image: https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Extensions
 
 # Desenvolvimento *Web*
 
-- **Frontend**
-- **Backend**
-- **Fullstack**
+- Frontend
+- Backend
+- Fullstack
 
 ---
 layout: quote
@@ -87,10 +88,10 @@ Principais responsabilidades
 # Desenvolvimento *Frontend*
 Tecnologias Típicas
 
-- **HTML5**: Estrutura o conteúdo web <logos-html5 />
-- **CSS3**: Estiliza e organiza o layout <logos-css3 />
-- **JavaScript**: Adiciona interatividade <logos-javascript />
-- **Frameworks**: React, Angular, Vue.js <logos-react /> <logos-angular-icon /> <logos-vue />
+- HTML5: Estrutura o conteúdo web <logos-html5 />
+- CSS3: Estiliza e organiza o layout <logos-css3 />
+- JavaScript: Adiciona interatividade <logos-javascript />
+- *Frameworks*: React, Angular, Vue.js <logos-react /> <logos-angular-icon /> <logos-vue />
 
 ---
 
@@ -106,13 +107,13 @@ Atividades Típicas
 layout: quote
 ---
 
-# Desenvolvimento ***Backend***
+# Desenvolvimento *Backend*
 
 > O **Backend** envolve a lógica na retaguarda da aplicação, priorizando a interação com bancos de dados, autenticação e outras funcionalidades essenciais que acontecem no servidor e são transparentes ao usuário.
 
 ---
 
-# Desenvolvimento ***Backend***
+# Desenvolvimento *Backend*
 Principais responsabilidades
 
 - Processamento de dados e lógica de negócios
@@ -122,20 +123,19 @@ Principais responsabilidades
 
 ---
 
-# Desenvolvimento ***Backend***
+# Desenvolvimento *Backend*
 Tecnologias Típicas
 
-- **Linguagens de programação**: Python, Java, Ruby, PHP, Node.js
+- Linguagens de programação: Python, Java, Ruby, PHP, Node.js
 	- <logos-python /> <logos-java /> <logos-ruby /> <logos-php /> <logos-nodejs />
-- **Bancos de dados**: MySQL, PostgreSQL, MongoDB
+- Bancos de dados: MySQL, PostgreSQL, MongoDB
 	- <logos-mysql /> <logos-postgresql /> <logos-mongodb-icon />
-- **APIs**: RESTful, GraphQL
-- **Servidores**: Apache, Nginx
-
+- APIs: RESTful, GraphQL
+- Servidores: Apache, Nginx
 
 ---
 
-# Desenvolvimento ***Backend***
+# Desenvolvimento *Backend*
 Atividades típicas
 
 - Armazenamento e recuperação de dados de um banco de dados
@@ -164,10 +164,10 @@ Principais responsabilidades
 # Desenvolvimento *Fullstack*
 Tecnologias Típicas
 
-- **Linguagens e frameworks Fullstack**: Node.js, Ruby on Rails, Django
+- Linguagens e *frameworks* *Fullstack*: Node.js, Ruby on Rails, Django
 	- <logos-nodejs /> <logos-ruby /> <logos-django-icon />
-- **Conhecimento de tecnologias de frontend e backend**
-- **Ferramentas DevOps**: Docker, Kubernetes, CI/CD <logos-docker-icon /> <logos-kubernetes /> 
+- Conhecimento de tecnologias de *frontend* e *backend*
+- Ferramentas DevOps: Docker, Kubernetes, CI/CD <logos-docker-icon /> <logos-kubernetes /> 
 
 ---
 
@@ -195,14 +195,19 @@ layout: section
 # Que caminho seguir?
 
 ---
+layout: center
+---
 
-- **Frontend**: Se você é criativo, gosta de *design* e da interação com o usuário.
-- **Backend**: Se você prefere lidar com lógica, servidores e a manipulação de dados.
-- **Fullstack**: Se você quer ter uma visão global do desenvolvimento e gosta de trabalhar com todos os aspectos de uma aplicação.
+> *Frontend*: Se você é criativo, gosta de *design* e da interação com o usuário.
+
+> *Backend*: Se você prefere lidar com lógica, servidores e a manipulação de dados.
+
+> *Fullstack*: Se você quer ter uma visão global do desenvolvimento e gosta de trabalhar com todos os aspectos de uma aplicação.
 
 ---
 
 # Tecnologias e Ferramentas
+PW1
 
 - HTML5 <logos-html5 />
 - CSS3 <logos-css3 />
@@ -256,11 +261,12 @@ layout: quote
 layout: fact
 ---
 
-# PW1 2025.2
+# PW1 2026.1
 
 ---
 
-# Metodologia **PW1 2025.2**
+# Metodologia
+PW1 2026.1
 
 * A cada aula
 	- Abordagem de um conceito específico
@@ -268,10 +274,16 @@ layout: fact
 	- Até 50 minutos de exposição
 	- Atividades didáticas
 * Atividades avaliativas em algumas aulas (N1)
+
+---
+
+# Metodologia
+PW1 2026.1
+
 * Trabalho final (N2) 
 	- Individual
 	- Tema livre
-	- Criação de aplicação com funcionalidades
+	- Criação de aplicação com funcionalidades, interação com usuário e uso de bancos de dados
 
 ---
 layout: fact
