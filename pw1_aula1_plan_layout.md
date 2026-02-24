@@ -4,7 +4,7 @@ transition: fade
 colorSchema: dark
 lineNumbers: true
 layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
 title: Planejamento de Layout

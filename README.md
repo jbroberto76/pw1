@@ -1,4 +1,4 @@
-``![](/img/cover_banner.jpg)
+``![](/public/cover_banner.svg)
 
 # Programação Web 1
 José Roberto Bezerra
