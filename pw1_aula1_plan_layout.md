@@ -80,7 +80,7 @@ layout: section
 
 ---
 
-![bg fit](./img/bwd_fig12.png)
+![bg fit](/bwd_fig12.png)
 
 ---
 
@@ -89,11 +89,11 @@ layout: section
 - Auto-descritivo
 - Indicação de página atual
 
-![](./img/bwd_fig13.png)
+![](/bwd_fig13.png)
 
 ---
 
-![bg fit](./img/bwd_fig14.png)
+![bg fit](/bwd_fig14.png)
 
 ---
 
@@ -107,7 +107,7 @@ Elementos de *Design*
 
 ---
 
-![bg fit](./img/bwd_fig15.png)
+![bg fit](/bwd_fig15.png)
 
 ---
 
@@ -122,7 +122,8 @@ Elementos de *Design*
 - **Proporção divina**
 - Pitágoras observou um padrão matemático que ocorre na natureza
 - Em *Design* Gráfico as composições são divididas obedecendo a proporção divina tornando-as agradáveis aos olhos
-![](./img/bwd_fig16.png)
+
+![](/bwd_fig16.png)
 
 --- 
 
@@ -138,11 +139,11 @@ Elementos de *Design*
 - Essencial para *Design* Gráfico
 - Vai além da questão do alinhamento dos elementos
 - Relacionado principalmente a proporção
-![](./img/bwd_fig18.png)
+![](/bwd_fig18.png)
 
 ---
 
-![bg contain](./img/bwd_fig19.png)
+![bg contain](/bwd_fig19.png)
 
 ---
 
@@ -179,7 +180,7 @@ layout: section
 
 ---
 
-![bg contain](./img/bwd_fig129.png)
+![bg contain](/bwd_fig129.png)
 
 ---
 
@@ -189,7 +190,7 @@ layout: section
 
 ---
 
-![bg contain](./img/bwd_fig130.png)
+![bg contain](/bwd_fig130.png)
 
 ---
 
@@ -199,7 +200,7 @@ layout: section
 
 ---
 
-![bg contain](./img/bwd_fig131.png)
+![bg contain](/bwd_fig131.png)
 
 ---
 
