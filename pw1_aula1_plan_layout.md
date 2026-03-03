@@ -3,7 +3,7 @@ theme: default
 transition: fade
 colorSchema: dark
 lineNumbers: true
-layout: image-right
+layout: image
 image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra

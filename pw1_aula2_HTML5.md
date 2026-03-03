@@ -1,14 +1,14 @@
 ---
 theme: default
-lineNumbers: true
-layout: image-right
 transition: fade
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
-title: HTML5
+lineNumbers: true
+colorSchema: dark
+layout: image
+image: /cover.svg
 author: José Roberto Bezerra
 description: Programação Web 1
+title: HTML5
 exportFilename: pw1_aula2_HTML5
-colorSchema: dark
 ---
 
 # {{ $slidev.configs.title }}

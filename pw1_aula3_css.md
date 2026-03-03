@@ -1,14 +1,14 @@
 ---
 theme: default
 transition: fade
+colorSchema: dark
 lineNumbers: true
-layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
-title: Cascading Style Sheets
+layout: image
+image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
+title: Cascading Style Sheets
 exportFilename: pw1_aula3_CSS
-colorSchema: dark
 ---
 
 # {{ $slidev.configs.title }}
