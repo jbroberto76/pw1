@@ -423,7 +423,6 @@ layout: fact
 Usando as ferramentas de medição de desempenho mostradas, carregue uma página com grande quantidade de elementos. Por exemplo, site de notícias, Youtube e similares.
 - Quanto tempo levou para carregar a página?
 - Quais os elementos que levaram mais tempo para carregar?
-- Em quanto tempo a página foi carregada?
 - Recarregue a página e observe quanto tempo leva o carregamento. Levou menos tempo?
 
 ---
