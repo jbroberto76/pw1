@@ -1,14 +1,14 @@
 ---
 theme: default
+colorSchema: dark
 transition: fade
 lineNumbers: true
-layout: image-right
-image: /img/jose-campos-zRkBOOpKRhs-unsplash.jpg
-title: Bootstrap
+layout: image
+image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
+title: Bootstrap
 exportFilename: pw1_aula4_Bootstrap
-colorSchema: dark
 ---
 
 # {{ $slidev.configs.title }}
@@ -33,11 +33,11 @@ colorSchema: dark
 layout: section
 ---
 
-# **Quickstart**
+# Quickstart
 
 ---
 
-# **HTML Base**
+# HTML Base
 ```html{4-5}{class: '!children:text-xl'}
 <!DOCTYPE html>
 <html lang="en">
@@ -399,26 +399,24 @@ layout: fact
 # Exercícios
 
 ---
-layout: image-right
-# the image source
-image: /img/exerc_bootstrap.png
-# a custom class name to the content
-#class: my-cool-content-on-the-left
----
 
-# Exercício 1 (Não é necessário enviar)
-
+# 1 (Não é necessário enviar)
 Utilizando o Bootstrap, criar um *layout* similar ao mostrado na figura contendo os elementos:
 - Cabeçalho com título
 - Corpo com 3 colunas
 
-![](./img/exerc_bootstrap.png)
+![](/exerc_bootstrap.png)
+
+---
+layout: image
+image: /exerc_bootstrap.png
+backgroundSize: contain
+---
 
 ---
 
 #  Exercício 1 (Não é necessário enviar)
-
-**Dicas**
+Dicas
 - Utilize o arquivo HTML base para iniciar
 - Crie uma `<div>` para cada elemento acima
 - Defina o tipo de *container* para cada uma delas
@@ -431,7 +429,6 @@ Utilizando o Bootstrap, criar um *layout* similar ao mostrado na figura contendo
 ---
 
 # Exercício 2 (Atividade Bootstrap)
-
 Modifique o *design* do exercício anterior adicionando os seguintes elementos:
 - No *header* acrescente *links* (home, news, contact) usando o componente Navs ou Navbar
 - Em cada coluna, acrescente um Card contendo uma imagem, um título, conteúdo e um botão.
