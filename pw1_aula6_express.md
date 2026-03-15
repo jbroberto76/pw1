@@ -2,13 +2,14 @@
 theme: default
 transition: fade
 lineNumbers: true
-layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
-title: Express Framework
+colorSchema: dark
+layout: image
+image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
+title: Express Framework
 exportFilename: pw1_aula6_express
-colorSchema: dark
+
 ---
 
 # {{ $slidev.configs.title }}

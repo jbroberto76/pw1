@@ -2,12 +2,12 @@
 theme: default
 transition: fade
 lineNumbers: true
-layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
-title: Node Package Manager
+layout: image
+image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
 colorSchema: dark
+title: Node Package Manager
 exportFilename: pw1_aula5_npm
 ---
 
@@ -31,8 +31,6 @@ exportFilename: pw1_aula5_npm
 - *Framework* Express
 
 ---
-
-
 
 # **Node Package Manager**
 
@@ -205,8 +203,8 @@ layout: two-cols-header
 
 :: left ::
 
-* ```npm install <module>``` instala o pacote especificado e as dependências
-* O arquivo ```package.json``` é atualizado automaticamente
+* `npm install <module>` instala o pacote especificado e as dependências
+* O arquivo `package.json` é atualizado automaticamente
 
 :: right ::
 
@@ -240,11 +238,11 @@ layout: two-cols-header
 
 | Comando                       | Ação                                              |
 |-------------                  |-------------------------------------------------  |
-| ```npm init```                | Cria o arquivo ```package.json``` personalizado   |
-| ```npm init -y```             | Cria o arquivo ```package.json``` padrão|
-| ```npm install <package>```   | Insere o pacote especificado em ```package.json```|
-| ```npm install <package> -g```| Instala glogalmente o pacote especificado |
-| ```npm install```             | Instala todas as dependências contidas em ```package.json```|
+| `npm init`                | Cria o arquivo `package.json` personalizado   |
+| `npm init -y`             | Cria o arquivo `package.json` padrão|
+| `npm install <package>`   | Insere o pacote especificado em `package.json`|
+| `npm install <package> -g`| Instala glogalmente o pacote especificado |
+| `npm install`             | Instala todas as dependências contidas em `package.json`|
 
 ---
 layout: quote
@@ -261,7 +259,7 @@ detected.
 
 - Reinicia a aplicação quando o código é modificado
 - Mesmo que a aplicação seja finalizada sem erros o monitoramento continua e reinicia a aplicação
-- Substitui o comando ```node``` para inicializar as aplicações
+- Substitui o comando `node` para inicializar as aplicações
 - Não demanda não modificação no código para sua utilização
 
 ---
@@ -436,7 +434,7 @@ layout: default
 
 ---
 
-# 3
+<!-- # 3
 
 - Utilize o nodemon para rodar a aplicação novamente (`nodemon index.js`)
 - Modifique o código em `/app1/routes/index.js` pelo código a seguir:
@@ -452,18 +450,17 @@ res.render('index', {title: 'Express', mysite: 'My first Express Site'})
 ```
 
 - Execute a aplicação
-- O que acontece?
+- O que acontece? -->
 
 
 ---
 layout: default
-
 ---
 
 # Referências
 
 - [NPM](https://www.npmjs.com/)
-- [Nodemon]()
+- [Nodemon](https://www.npmjs.com/package/nodemon)
 - [PM2](https://pm2.io/)
 - [Express](https://expressjs.com/)
 
