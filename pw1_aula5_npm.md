@@ -13,6 +13,7 @@ exportFilename: pw1_aula5_npm
 
 # {{ $slidev.configs.title }}
 {{ $slidev.configs.description }}
+<logos-npm />
 
 ---
 
@@ -31,8 +32,37 @@ exportFilename: pw1_aula5_npm
 - *Framework* Express
 
 ---
+layout: section
+---
 
-# **Node Package Manager**
+# Instalação Node.js
+
+---
+layout: iframe
+url: https://nodejs.org/pt-br/download
+---
+
+
+---
+layout: quote
+---
+
+# Gerenciadores de Pacotes
+
+> Node.js possui uma vasta coleção de módulos e pacotes que simplificam o processo de desenvolvimento de diversas aplicações. Para gerenciar esses pacotes e suas dependências, os existem gerenciadores de pacotes específicos para Node.js
+
+---
+
+# Gerenciadores de Pacotes
+Exemplos típicos
+
+- Yarn, mais rápido <logos-yarn />
+- PNPM, compatibilidade com NPM e Yarn <logos-pnpm /> 
+- NPM, o mais popular <logos-npm />
+
+---
+
+# Node Package Manager
 
 - Sistema de gerenciamento de pacotes do Node.js
 - Similar ao pip do Python, Apt do Ubuntu, dentre outros
@@ -42,7 +72,7 @@ exportFilename: pw1_aula5_npm
 layout: two-cols-header
 ---
 
-# **Node Package Manager**
+# Node Package Manager
 
 :: left ::
 
@@ -58,11 +88,11 @@ npm -v
 
 ---
 
-# **Node Version Manager**
+# Node Version Manager
 
 - O Node.js disponibiliza ainda um utilitário para o gereciamento de versões 
-    - ```nvm``` (OSX e Linux)
-    - ```nodist``` ou ```nvm-windows``` (Windows)
+    - `nvm` (OSX e Linux)
+    - `nodist` ou `nvm-windows` (Windows)
 - Controladores de versões normalmente são instalados a parte
 - Permite instalar e alternar entre diversas versões para testes
 - Uso do NVM é feito via linha de comando
@@ -169,7 +199,7 @@ npm init
 
 :: left ::
 
-1. **Fornecer as informações iniciais**
+1. Fornecer as informações iniciais
 - Nome
 - Versão
 - Descrição
@@ -185,7 +215,7 @@ layout: two-cols-header
 
 :: left ::
 
-2. **Efetiva a instalação**
+2. Efetiva a instalação
 - `npm install` instala pacotes e as dependências
 - Quando executado sem parâmetros instala **todas** as dependências listadas no arquivo `package.json`
 
@@ -206,12 +236,12 @@ layout: two-cols-header
 * `npm install <module>` instala o pacote especificado e as dependências
 * O arquivo `package.json` é atualizado automaticamente
 
-:: right ::
-
 ```bash{*}{class: '!children:text-xl'}
 npm install lodash
 npm install nodemon
 ```
+
+:: right ::
 
 * Usando uma única linha de comando
 ```bash{*}{class: '!children:text-xl'}
@@ -219,18 +249,12 @@ npm install lodash nodemon
 ```
 
 ---
-layout: two-cols-header
----
 
 # Instalação Global
-
-:: left ::
 
 * `npm install <module> -g` instala o pacote especificado e as depedências globalmente
 * O arquivo `package.json` é atualizado automaticamente
 * Em ambientes de nuvem é pouco utilizado
-
-:: right ::
 
 ---
 
@@ -243,6 +267,12 @@ layout: two-cols-header
 | `npm install <package>`   | Insere o pacote especificado em `package.json`|
 | `npm install <package> -g`| Instala glogalmente o pacote especificado |
 | `npm install`             | Instala todas as dependências contidas em `package.json`|
+
+---
+layout: section
+---
+
+# Módulos Típicos
 
 ---
 layout: quote
@@ -284,6 +314,12 @@ layout: two-cols-header
 - Instalação `npm install pm2 -g`
 - Inicia uma aplicação `pm2 start app.js`
 - Monitora todos as aplicações inicializadas com pm2 `pm2 monit`
+
+---
+layout: section
+---
+
+# Express Framework
 
 ---
 layout: quote
@@ -432,8 +468,6 @@ layout: default
 - Verifique a seção *scripts* do arquivo `package.json`
 - Modifique o *script start* para que a aplicação seja iniciada utilizando um monitor como Nodemon ou pm2
 
----
-
 <!-- # 3
 
 - Utilize o nodemon para rodar a aplicação novamente (`nodemon index.js`)
@@ -458,7 +492,7 @@ layout: default
 ---
 
 # Referências
-
+- [Baixar o Node.js](https://nodejs.org/pt-br/download)
 - [NPM](https://www.npmjs.com/)
 - [Nodemon](https://www.npmjs.com/package/nodemon)
 - [PM2](https://pm2.io/)
