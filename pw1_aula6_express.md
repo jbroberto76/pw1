@@ -55,7 +55,8 @@ app.listen(port, () => {
 ---
 
 # Tratamento de Requisições
-Caso o servidor receba (`req`) uma requisição GET em `/` a função de *callback* será retornada
+
+> Caso o servidor receba uma requisição (`req`) GET em `/` a função de *callback* será retornada
 
 ```js {5-7}{class: '!children:text-xl'}
 const express = require('express')
@@ -74,8 +75,11 @@ app.listen(port, () => {
 ---
 
 # Roteamento Básico
+*Routing*
 
-> *Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (`GET`, `POST`, and so on)*.
+> Determina como uma aplicação responde a uma requisição do cliente para um *endpoint* (*path*), um protocolo (HTTP, etc) e um método específicos (GET, POST, etc) 
+
+<!-- > *Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (`GET`, `POST`, and so on)*. -->
 
 ---
 
@@ -111,7 +115,9 @@ layout: fact
 layout: quote
 ---
 
-> [Postman](https://www.postman.com/) *is an API platform for building and using APIs. It simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster*.
+> Postman is an API platform for building and using APIs. It simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster*.
+
+[<logos-postman />](https://www.postman.com/)
 
 ---
 
@@ -143,23 +149,30 @@ app.get('/user/:id', (req, res) => {
 
 # Exemplos
 
-
 <v-click hide>
 
-Route path: `/flights/:from-:to`<br>
-Request URL: `http://localhost:3000/flights/LAX-SFO`<br>
+<br>
+
+Route path: `/flights/:from-:to`
+
+Request URL: `http://localhost:3000/flights/LAX-SFO`
+
 `req.params: { "from": "LAX", "to": "SFO" }`
 
 </v-click>
 
 
-<v-click>
+<v-after>
 
-Route path: `/plantae/:genus.:species`<br>
-Request URL: `http://localhost:3000/plantae/Prunus.persica`<br>
+<br>
+
+Route path: `/plantae/:genus.:species`
+
+Request URL: `http://localhost:3000/plantae/Prunus.persica`
+
 `req.params: { "genus": "Prunus", "species": "persica" }`
 
-</v-click>
+</v-after>
 
 ---
 layout: two-cols-header
