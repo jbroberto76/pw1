@@ -7,7 +7,7 @@ layout: image
 image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
-title: Exercício Avançado
+title: Exercício Avançado Express
 exportFilename: pw1_exerc_express
 ---
 
@@ -20,7 +20,7 @@ exportFilename: pw1_exerc_express
 ---
 
 
-# Exercício Extra
+# Exercício Avançado
 Blog Pessoal com Express
 
 > Aplicação prática para consolidar os conceitos de rotas, *middlewares* e tratamento de requisições com Express
@@ -29,7 +29,7 @@ Blog Pessoal com Express
 
 # Contexto
 
-Você vai criar uma **API simples para um blog pessoal**. O foco é praticar:
+Criar uma **API simples para um blog pessoal**. O foco é praticar:
 
 - Rotas com diferentes métodos HTTP
 - Route params (`req.params`)
@@ -41,15 +41,21 @@ Você vai criar uma **API simples para um blog pessoal**. O foco é praticar:
 
 # Estrutura do Projeto
 
-blog-api/
-├── app.js (arquivo principal)
-└── package.json
-
+```plantuml
+@startfiles
+!theme crt-amber
+/blog-api/
+/blog-api/app.js 
+<note>
+Arquivo principal da aplicação
+</note>
+/blog-api/package.json
+@endfiles
+```
 ---
 
 # Dados em Memória
-
-No início do `app.js`, crie um *array* de posts:
+No início do `app.js`, criar um *array* de posts
 
 ```javascript
 const posts = [
@@ -86,10 +92,9 @@ Crie um middleware que registra cada acesso no console no formato abaixo:
 - URL acessada
 - Horário da requisição
 
-Exemplo
-Formato: [GET] /posts - 10:30:45
+Exemplo de formato: 
 
----
+`[GET] /posts - 10:30:45`
 
 ```js
 app.use((req, res, next) => {
@@ -270,25 +275,34 @@ app.get('/*splat', (req, res) => {
 
 <!-- 
 ```js
-const express = require('express');
-const app = express();
-const port = 3000;
+// const express = require('express');
+// const app = express();
+// const port = 3000;
 
-// Middleware para parsing de JSON
-app.use(express.json());
+// // Middleware para parsing de JSON
+// app.use(express.json());
 
-// Dados em memória
-const posts = [
-  { id: 1, titulo: "Meu primeiro post", conteudo: "Olá mundo!", autor: "João" },
-  { id: 2, titulo: "Aprendendo Express", conteudo: "Estou gostando muito!", autor: "Maria" }
-];
-let proximoId = 3;
+// // Dados em memória
+// const posts = [
+//   { id: 1, titulo: "Meu primeiro post", conteudo: "Olá mundo!", autor: "João" },
+//   { id: 2, titulo: "Aprendendo Express", conteudo: "Estou gostando muito!", autor: "Maria" }
+// ];
+// let proximoId = 3;
 
-// Implemente os middlewares e rotas aqui...
+// // Implemente os middlewares e rotas aqui...
 
-app.listen(port, () => {
-  console.log(`Blog API rodando em http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Blog API rodando em http://localhost:${port}`);
+// });
 ```
 -->
 
+---
+
+# Referências
+- [Express](https://expressjs.com/)
+- [Express JS Tutorial](https://www.tutorialspoint.com/expressjs/index.htm)
+
+---
+src: /snippets/end.md
+---

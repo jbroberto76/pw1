@@ -30,7 +30,7 @@ Agenda
 - Medição de desempenho
 - HTML5
 
-## Aula 3 - CSS
+### Aula 3 - CSS
 
 Objetivo de aprendizagem
 - Conhecer os princípios básicos do CSS3
@@ -40,7 +40,7 @@ Agenda
 - Como CSS funciona?
 - *Frameworks CSS*
 
-## Aula 4 - Bootstrap
+### Aula 4 - Bootstrap
 
 Objetivo de Aprendizagem
 - Trilhar os primeiros passos para utilização do *Framework* CSS Bootstrap
@@ -51,7 +51,7 @@ Agenda
 - Componentes
 - Repositório de exemplos
 
-## Aula 5 - NPM
+### Aula 5 - NPM
 
 Objetivos de Aprendizagem
 - Utilizar o gerenciador de pacotes NPM
@@ -63,7 +63,7 @@ Agenda
 - Módulos típicos
 - *Framework* Express
 
-## Aula 6
+### Aula 6 - Express
 
 Objetivo de Aprendizagem
 - Aplicar os conceitos fundamentais do *framework* Express
@@ -73,7 +73,7 @@ Agenda
 - *Middlewares*
 - Rotas
 
-## Aula 7
+### Aula 7 - Routers
 
 Objetivos de Aprendizagem
 - Aprimorar o uso de rotas com Nodejs
