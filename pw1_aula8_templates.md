@@ -1,14 +1,14 @@
 ---
 theme: default
 transition: fade
+colorSchema: dark
 lineNumbers: true
 layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
-title: Templates
+image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
 exportFilename: pw1_aula8_templates
-colorSchema: dark
+title: Templates
 ---
 
 # {{ $slidev.configs.title }}
@@ -17,8 +17,7 @@ colorSchema: dark
 ---
 
 # Objetivos de Aprendizagem
-- O que são *Template Engines*?
-- Instalar o *Template Engine* EJS
+- Conhecer e instalar *Template Engines*
 - Utilizar funções básicas de *templates* em geral
 
 ---
@@ -78,7 +77,7 @@ layout: section
 # Instalação
 EJS com Express Generator
 
-- `npm install express express-generator` (Rever Aula 7)
+- `npm install express` (Rever Aula 7)
 - Para utilizar o EJS com Express, bastam duas linhas de configuração no `app.js`:
 
 ```js {*}{class: '!children:text-lg'}

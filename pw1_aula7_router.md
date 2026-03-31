@@ -1,14 +1,14 @@
 ---
 theme: default
 transition: fade
+colorSchema: dark
 lineNumbers: true
-layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
-title: Rotas com Express
+layout: image
+image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
+title: Rotas com Express
 exportFilename: pw1_aula7_router
-colorSchema: dark
 ---
 
 # {{ $slidev.configs.title }}
@@ -54,36 +54,49 @@ Para instalar o `express-generator` siga os passos abaixo
 npm install express express-generator
 npx express-generator --view=ejs 
 ```
+3. A opção `--view=ejs` indica o *Template Engine* utilizado
+4. Caso o nome da aplicação seja passado no comando (por exemplo, `npx express-generator myapp`) um diretório com o nome da aplicação é criado
+5. Desta forma uma estrutura padrão (*skeleton*) de aplicação é criada
 
-3. Caso o nome da aplicação seja passado no comando (por exemplo, `npx express-generator myapp`) um diretório com o nome da aplicação é criado
-4. Desta forma uma estrutura padrão (*skeleton*) de aplicação é criada
+---
+
+# Uso sem Instalação
+É possível utilizar o `express-generator` sem instalar o pacote
+
+1. Digite o comando a seguir para criar uma nova estrutura de aplicação
+
+```bash {*}{class: '!children:text-xl'}
+npx express-generator --view=ejs [nome-do-projeto]
+```
+
+2. Será criado um diretório com a string que foi passada como o nome do projeto. Caso deseja-se criar uma aplicação no diretório atual basta usar `.` como nome do projeto
+3. Desta forma uma estrutura padrão (*skeleton*) de aplicação é criada neste diretório
 
 ---
 layout: center
 ---
 
-# Estrutura
-
 ```plantuml
-@startwbs
-*_ ""myapp"" <&folder>
-**_ ""package.json""
-**_ ""app.js""
-**_ ""public""
-***_ ""javascripts"" <&folder>
-***_ ""images"" <&folder>
-***_ ""stylesheets"" <&folder>
-****_ ""style.css""
-**_ ""routes""
-***_ ""index.js""
-***_ ""users.js""
-**_ ""views""
-***_ index.pug
-***_ layout.pug
-***_ error.pug
-**_ bin
-***_ www <&script>
-@endwbs
+@startfiles
+!theme plain
+/myapp/
+/myapp/public/
+/myapp/public/javascripts/
+/myapp/public/images/
+/myapp/public/stylesheets/
+/myapp/public/stylesheets/style.css
+/myapp/routes/
+/myapp/routes/index.js
+/myapp/routes/users.js
+/myapp/views/
+/myapp/views/error.jade
+/myapp/views/index.jade
+/myapp/views/layout.jade
+/myapp/app.js
+/myapp/package.json
+/myapp/bin/
+/myapp/bin/www
+@endfiles
 ```
 
 ---
@@ -238,7 +251,6 @@ Exemplo de HTML
     <img src="images/kitten.png" alt="Imagem de Exemplo">
 </body>
 </html>
-
 ```
 
 ---
@@ -387,12 +399,12 @@ layout: fact
 Utilizando o express em conjunto com `express-generator`, explore as possibilidades da utilização de um *router*.
 
 1. Crie o diretório e inicie uma nova aplicação (`npm init`) 
-2. Instale os módulos `express` e `express-generator` (`npm install express express-generator`)
+2. Instale os módulos `express` (obrigatório) e `express-generator` (opcional) (`npm install express express-generator`)
 3. Use o express-generator para criar a estrutura no diretório criado em **1.** (`npx express-generator --view=ejs [DIRETORIO_CRIADO]`)
 4. Observe que já existem duas rotas: `/` e `/users`
 5. Acrescentar as rotas `/news` e `/about` fazendo os ajustes necessários em `app.js`
 6. Criar os respectivos arquivos de rotas em `/routes` (`news.js` e `about.js`)
-    1. Siga o mesmo padrão do arquivo `users.js`
+    - Siga o mesmo padrão do arquivo `users.js`
 7. Modificar a mensagem *'respond with a resource'*  para uma mensagem de texto apenas informando o nome da página que está sendo acessada (*users, news ou about*)
 8. Modifique o valor da variável `title` em `/route/index.js`. O que acontece?
 9. Teste todas as rotas

@@ -89,8 +89,7 @@ Agenda
 ### Aula 8 - Templates
 
 Objetivos de Aprendizagem
-- O que são *Template Engines*?
-- Instalar o *Template Engine* EJS
+- Conhecer e instalar *Template Engines*
 - Utilizar funções básicas de *templates* em geral
 
 Agenda
