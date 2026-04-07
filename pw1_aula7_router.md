@@ -210,26 +210,17 @@ O nome do diretório não faz parte do caminho para acessar o arquivo
 ::right::
 
 ```plantuml
-@startwbs
-<style>
-wbsDiagram {
-  node {
-    :depth(3) {
-      BackgroundColor pink
-
-    }
-  }
-}
-</style>
-*_ ""myapp"" <&folder>
-**_ ""/public""
-***_ ""javascripts"" <&folder>
-***_ ""images"" <&folder>
-**** ""bg.png <&image>""
-**** ""kitten.png <&image>""
-***_ ""stylesheets"" <&folder>
-**** ""style.css"" <&file>
-@endwbs
+@startfiles
+!theme plain
+/myapp/
+/myapp/public/
+/myapp/public/javascripts/
+/myapp/public/images/
+/myapp/public/images/kitten.png
+/myapp/public/images/bg.png
+/myapp/public/stylesheets/
+/myapp/public/stylesheets/style.css
+@endfiles
 ```
 
 ---
