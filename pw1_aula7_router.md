@@ -125,7 +125,7 @@ layout: center
 
 ---
 layout: image-right
-image: ./img/welcome_to_express.png
+image: /welcome_to_express.png
 backgroundSize: contain
 ---
 

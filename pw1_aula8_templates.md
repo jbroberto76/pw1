@@ -45,7 +45,7 @@ layout: quote
 ---
 
 # Exemplos
-Com Express podem ser utilizados diversos TE.
+Com Express podem ser utilizados diversos *engines*.
 
 - [Pug](https://pugjs.org/api/getting-started.html) <logos-pug />
 - [Handlebars](https://handlebarsjs.com/) <logos-handlebars />
@@ -78,7 +78,7 @@ layout: section
 EJS com Express Generator
 
 - `npm install express` (Rever Aula 7)
-- Para utilizar o EJS com Express, bastam duas linhas de configuração no `app.js`:
+- Para utilizar o EJS com Express, bastam duas linhas de configuração em `app.js`:
 
 ```js {*}{class: '!children:text-lg'}
 // define o caminho a partir de /views
@@ -124,21 +124,29 @@ layout: two-cols-header
 ::right::
 
 ```plantuml
-@startwbs
-*_ <&folder> ""myapp""
-**_ ""package.json""
-**_ ""app.js""
-**_ ""routes""
-**_ ""views""
-***_ <&folder> ""partials""
-****_ ""<&file>header.ejs""
-****_ ""<&file>footer.ejs""
-****_ ""<&file>sidebar.ejs""
-****_ ""<&file>adds.ejs""
-***_ ""<&file>index.ejs""
-***_ ""<&file>layout.ejs""
-***_ ""<&file>error.ejs""
-@endwbs
+@startfiles
+!theme plain
+/myapp/
+/myapp/public/
+/myapp/public/javascripts/
+/myapp/public/images/
+/myapp/public/stylesheets/
+/myapp/public/stylesheets/style.css
+/myapp/routes/
+/myapp/routes/index.js
+/myapp/routes/users.js
+/myapp/views/
+/myapp/views/error.ejs
+/myapp/views/index.ejs
+/myapp/views/layout.ejs
+/myapp/views/partials/header.ejs
+/myapp/views/partials/footer.ejs
+/myapp/views/partials/sidebar.ejs
+/myapp/app.js
+/myapp/package.json
+/myapp/bin/
+/myapp/bin/www
+@endfiles
 ```
 
 ---
@@ -168,14 +176,22 @@ layout: section
     * `npm install express express-generator`
 
 ```plantuml
-@startwbs
-*_ <&folder> ""app""
-**_ ""package.json""
-**_ ""app.js""
-**_ ""routes""
-**_ ""views""
-***_ <&folder> ""partials""
-@endwbs
+@startfiles
+!theme plain
+/myapp/
+/myapp/public/
+myapp/routes/
+/myapp/views/
+/myapp/views/error.ejs
+/myapp/views/index.ejs
+/myapp/views/layout.ejs
+/myapp/views/partials/header.ejs
+/myapp/views/partials/footer.ejs
+/myapp/views/partials/sidebar.ejs
+/myapp/app.js
+/myapp/package.json
+/myapp/bin/
+@endfiles
 ```
 
 ---
@@ -185,17 +201,6 @@ layout: section
 * Execute o EG
   - `npx express-generator --view=ejs app`, caso o diretório `app` **não tenha sido criado**
   - **OU** `npx express-generator --view=ejs`, caso o comando esteja sendo executado dentro do diretório (**já criado**) da aplicação
-
-```plantuml
-@startwbs
-*_ <&folder> ""app""
-**_ ""package.json""
-**_ ""app.js""
-**_ ""routes""
-**_ ""views""
-***_ <&folder> ""partials""
-@endwbs
-```
 
 ---
 
