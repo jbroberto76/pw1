@@ -3,7 +3,7 @@ theme: default
 transition: fade
 lineNumbers: true
 layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /cover.svg
 title: MongoDB
 description: Programação Web 1
 author: José Roberto Bezerra
@@ -85,7 +85,7 @@ Vantagens
 
 - Alta escalabilidade eliminando pontos de falha únicos
 - Modelos de dados flexíveis
-- Criação e mudança podem ser feitas “on the fly”
+- Criação e mudança podem ser feitas “*on the fly*”
 - Alta performance devido à simplicidade da implementação comparada a RDBMS
 
 ---
@@ -228,7 +228,6 @@ var mydoc = {
 
 # BSON Types
 Formato Binário de Serialização
-
 
 [Referência BSON](https://www.mongodb.com/docs/manual/reference/bson-types/)
 
