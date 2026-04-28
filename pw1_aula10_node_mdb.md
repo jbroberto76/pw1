@@ -2,13 +2,14 @@
 theme: default
 transition: fade
 lineNumbers: true
-layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
-title: Nodejs + MongoDB
+colorSchema: dark
+layout: image
+image: /cover.svg
 description: Programação Web 1
 author: José Roberto Bezerra
+title: Nodejs + MongoDB
 exportFilename: pw1_aula10_node_MDB
-colorSchema: dark
+comark: true
 ---
 
 # {{ $slidev.configs.title }}
@@ -18,7 +19,7 @@ colorSchema: dark
 ---
 
 # Objetivo de Aprendizagem
-- Aplicar o MongoDB juntamente com Nodejs
+- Acessar uma base de dados MongoDB utilizando Node.js
 
 ---
 
@@ -77,9 +78,8 @@ const client = new MongoClient(uri);
 ---
 
 # Testando a Conexão
-`checkconn.js`
 
-```js {*}{class: '!children:text-lg'}
+```js [checkconn.js]{*}{class: '!children:text-lg'}
 async function run() {
   try {
     await client.connect();
@@ -96,12 +96,21 @@ run().catch(console.dir);
 ---
 
 # Listando BDs
-`listdbs.js`
+Função Auxiliar
 
 ```js {*}{class: '!children:text-lg'}
+async function listDatabases(client) {
+  const databasesList = await client.db().admin().listDatabases();
+  console.log("Databases:");
+  databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+}
+```
+---
+
+# Listando BDs
+
+```js [listdbs.js]{*}{class: '!children:text-lg'}
 async function main() {
-  const uri = "mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority";
-  const client = new MongoClient(uri);
   try {
     await client.connect();
     await listDatabases(client);
@@ -112,19 +121,6 @@ async function main() {
   }
 }
 main().catch(console.error);
-```
-
----
-
-# Listando BDs
-Função Auxiliar
-
-```js {*}{class: '!children:text-lg'}
-async function listDatabases(client) {
-  const databasesList = await client.db().admin().listDatabases();
-  console.log("Databases:");
-  databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-}
 ```
 
 ---
@@ -166,9 +162,8 @@ Exemplos:
 ---
 
 # Sample Airbnb
-`sample_abnb.js`
 
-```js {*}{class: '!children:text-lg'}
+```js [sample_abnb.js] {*}{class: '!children:text-lg'}
 async function main() {
   const { MongoClient } = require('mongodb');
   const uri = 'mongodb+srv://<dbUser>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority';

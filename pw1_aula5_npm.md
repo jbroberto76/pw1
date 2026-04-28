@@ -448,7 +448,7 @@ layout: fact
 
 # 1
 
-5. Pare a aplicação (CTRL + D)
+5. Pare a aplicação (CTRL + C)
 6. Utilize o `nodemon` para rodar a aplicação novamente (`nodemon index.js`)
 7. Modifique o código em `index.js` (linha 9, por exemplo)
 8. O que acontece?
