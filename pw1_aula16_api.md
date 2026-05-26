@@ -3,7 +3,7 @@ theme: default
 transition: fade
 lineNumbers: true
 layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /cover.svg
 title: Application Programming Interface
 description: Programação Web 1
 author: José Roberto Bezerra
@@ -27,6 +27,7 @@ colorSchema: dark
 - Arquiteturas Típicas
 - REST
 - Criando a primeira API
+- Ferramentas de Nuvem
 
 ---
 layout: section
@@ -381,6 +382,40 @@ Testando os *endpoints*
     - No console digite `curl -d 'name=Prog%20Web%201' http://localhost:8000/v1/hi`
         - Note que os caracteres precisam ser codificados para URL (URL-encoded), por isso o espaço em branco está sendo substituído por `%20`. Para evitar isso, utilize:
             - `curl --data-urlencode 'name=Prog Web 1' http://localhost:8000/v1/hi`
+
+---
+layout: section
+---
+
+# Ferramentas de Nuvem
+
+---
+layout: fact
+---
+
+Como publicar as APIs criadas?
+
+---
+
+# Ferramentas de Nuvem
+
+- AWS
+- Google Cloud Platform
+- Digital Ocean
+- Github Codespaces
+- StackBlitz <logos-stackblitz />
+
+---
+
+# Github Codespaces
+[Introdução](https://docs.github.com/pt/codespaces/about-codespaces/what-are-codespaces)
+
+
+---
+
+# StackBlitz <logos-stackblitz />
+
+
 
 ---
 layout: fact

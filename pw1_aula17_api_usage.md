@@ -3,7 +3,7 @@ theme: default
 transition: fade
 lineNumbers: true
 layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /cover.svg
 title: Consumindo APIs de Terceiros
 description: Programação Web 1
 author: José Roberto Bezerra
@@ -239,9 +239,8 @@ Iniciando o projeto
 ---
 
 # HelloApp
-`app.js`
 
-```js {*}{class: '!children:text-xl'}
+```js [app.js]{*}{class: '!children:text-xl'}
 const express = require('express')
 const app = express()
 const axios = require('axios')
@@ -263,7 +262,7 @@ const API_URL =
 # HelloApp
 Adicionando as rotas `/` e `/who` ao `app.js`
 
-```js {*}{class: '!children:text-xl'}
+```js [app.js]{*}{class: '!children:text-xl'}
 app.get('/', async (req, res) => {
     res.render('index');
 })
@@ -287,9 +286,8 @@ Adicionando os *templates* em `/views`
 ---
 
 # HelloApp
-`header.ejs` e `footer.ejs`
 
-```html
+```html [header.ejs]
 <!doctype html>
 <html lang="en">
   <head>
@@ -301,7 +299,7 @@ Adicionando os *templates* em `/views`
   <body>
 ```
 <br><br>
-```html
+```html [footer.ejs]
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
@@ -310,9 +308,8 @@ Adicionando os *templates* em `/views`
 ---
 
 # HelloApp
-`index.ejs`
 
-```js
+```js [index.ejs]
 <%- include('./partials/header'); %>
 <div class="container d-flex vh-100">
     <div class="row justify-content-center align-self-center w-100">
@@ -336,9 +333,8 @@ Adicionando os *templates* em `/views`
 ---
 
 # HelloApp
-`message.ejs`
 
-```js
+```html [message.ejs]
 <%- include('./partials/header'); %>
 <div class="container d-flex vh-100">
         <div class="row justify-content-center align-self-center w-100">
@@ -375,7 +371,7 @@ Teste parcial
 # HelloApp
 `/who`
 
-```js {*}{class: '!children:text-2xl'}
+```js [app.js]{*}{class: '!children:text-2xl'}
 app.post('/who', async (req, res) => {
   const username = req.body.username
   console.log(`Variável username recebida do form: ${username}`)
@@ -401,7 +397,7 @@ layout: quote
 # HelloApp
 `/whobypost`
 
-```js
+```js [app.js]
 app.post('/whobypost', (req, res) => {
     const username = req.body.username
     const url_ = `${API_URL}/v1/hi`
