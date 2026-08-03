@@ -61,9 +61,9 @@ image: https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Extensions
 
 # Desenvolvimento *Web*
 
-- Frontend
-- Backend
-- Fullstack
+- *Frontend*
+- *Backend*
+- *Fullstack*
 
 ---
 layout: quote
@@ -71,7 +71,7 @@ layout: quote
 
 # Desenvolvimento *Frontend*
 
-> O **Frontend** é responsável pela interface do usuário e pela experiência de interação com o sistema. É o que o usuário vê e interage diretamente no navegador.
+> O **Frontend** se preocupa com a interface do usuário e a experiência de interação com o sistema. É o que o usuário vê e interage diretamente no navegador.
 
 ---
 
@@ -99,6 +99,7 @@ Tecnologias Típicas
 Atividades Típicas
 
 - Criação de botões, menus, formulários
+- *Layout* de aplicações
 - Garantir que o site funcione bem em dispositivos móveis e de mesa
 - Implementar animações e transições
 - Visual adequado para aplicação (Cores, fontes, *layout*, etc)
@@ -116,7 +117,7 @@ layout: quote
 # Desenvolvimento *Backend*
 Principais responsabilidades
 
-- Processamento de dados e lógica de negócios
+- Processamento de dados e lógica de negócios (fluxo)
 - Gerenciamento de banco de dados
 - Autenticação e autorização de usuários
 - Integração com APIs e serviços externos
@@ -164,10 +165,15 @@ Principais responsabilidades
 # Desenvolvimento *Fullstack*
 Tecnologias Típicas
 
-- Linguagens e *frameworks* *Fullstack*: Node.js, Ruby on Rails, Django
-	- <logos-nodejs /> <logos-ruby /> <logos-django-icon />
+- Linguagens e *frameworks* *Fullstack*: 
+	- Node.js <logos-nodejs />
+	- Ruby on Rails <logos-ruby />
+	- Django <logos-django-icon />
 - Conhecimento de tecnologias de *frontend* e *backend*
-- Ferramentas DevOps: Docker, Kubernetes, CI/CD <logos-docker-icon /> <logos-kubernetes /> 
+- Ferramentas DevOps:
+	- Docker <logos-docker-icon />
+	- Kubernetes <logos-kubernetes />
+	- CI/CD  
 
 ---
 
@@ -261,12 +267,12 @@ layout: quote
 layout: fact
 ---
 
-# PW1 2026.1
+# PW1 2026.2
 
 ---
 
 # Metodologia
-PW1 2026.1
+PW1 2026.2
 
 * A cada aula
 	- Abordagem de um conceito específico
@@ -278,7 +284,7 @@ PW1 2026.1
 ---
 
 # Metodologia
-PW1 2026.1
+PW1 2026.2
 
 * Trabalho final (N2) 
 	- Individual
