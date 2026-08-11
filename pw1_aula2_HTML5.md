@@ -428,7 +428,7 @@ Usando as ferramentas de medição de desempenho mostradas, carregue uma página
 ---
 
 # 2
-Use um dos validadores HTML5 para validar o site [https://www.monographcomms.ca/](https://www.monographcomms.ca/). Baixe o código fonte da página (Clique com botão direito em qualquer ponto da página e em seguida *View Page Source*). Faça alterações no código fonte da página para reduzir eventuais erros, avisos e informações tornando o arquivo compatível com HTML5. Faça *prints* do relatório do validador antes e depois das alterações. Poste os relatório na atividade Validação HTML5 no Google Classroom.
+Use um dos validadores HTML5 para validar o site [https://rule.studio/](https://rule.studio/). Baixe o código fonte da página (Clique com botão direito em qualquer ponto da página e em seguida *View Page Source*). Faça alterações no código fonte da página para reduzir eventuais erros, avisos e informações tornando o arquivo compatível com HTML5. Faça *prints* do relatório do validador antes e depois das alterações. Poste os relatório na atividade Validação HTML5 no Google Classroom.
 
 (Atividade Validação HTML5)
 

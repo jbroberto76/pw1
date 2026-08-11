@@ -3,7 +3,7 @@ theme: default
 transition: fade
 lineNumbers: true
 layout: image-right
-image: /jose-campos-zRkBOOpKRhs-unsplash.jpg
+image: /cover.svg
 title: API Keys
 description: Programação Web 1
 author: José Roberto Bezerra
@@ -70,7 +70,7 @@ Depende do serviço
 - No painel de desenvolvedor do provedor da API
     - Exemplo: criar uma chave no site da [OpenWeatherMap](https://openweathermap.org/api)
 - Mediante um cadastro
-[Developer Portal Marvel](https://developer.marvel.com/signup)
+<!-- [Developer Portal Marvel](https://developer.marvel.com/signup) -->
 
 ---
 
@@ -179,7 +179,6 @@ Criar uma aplicação que utiliza NASA APIs APOD para buscar *links* de imagens 
 # Referências
 - [Final Space API](https://finalspaceapi.com/)
 - [NASA Open API](https://api.nasa.gov/)
-
 
 ---
 src: /snippets/end.md
