@@ -2,7 +2,7 @@
 theme: default
 transition: fade
 lineNumbers: true
-layout: image-right
+layout: image
 image: /cover.svg
 title: Application Programming Interface
 description: Programação Web 1
@@ -55,7 +55,7 @@ Fonte: [schoolofnet.com](https://blog.schoolofnet.com/criando-sua-primeira-api-c
 
 # Exemplo de API
 
-> O sistema de *software* do instituto meteorológico contém dados diários. A aplicação no celular “conversa” com esse sistema por meio de APIs e mostra atualizações meteorológicas no app do telefone.
+> O sistema de *software* do instituto meteorológico contém dados diários. A aplicação no celular “conversa” com esse sistema por meio de APIs e mostra atualizações meteorológicas no *app* do telefone.
 
 ---
 
@@ -80,14 +80,17 @@ Fonte: [schoolofnet.com](https://blog.schoolofnet.com/criando-sua-primeira-api-c
 # Expansão
 
 - APIs podem ser usadas em várias plataformas  
-- Ex: integração de mapas em sites, Android, iOS, etc.
+- Exemplos 
+    - Integração de mapas em sites, Android, iOS, etc.
+    - Autenticação unificada em vários serviços (Google)
+    - Integração com IAs
 
 ---
 
 # Facilidade de Manutenção
 
-- A API atua como um *gateway* entre sistemas  
-- Alterações em uma parte não afetam a outra
+- Uma API atua como um *gateway* entre sistemas  
+- As alterações são independetes entre si
 
 ---
 
@@ -143,6 +146,7 @@ layout: section
 - Usa JSON  
 - Mais eficiente que REST  
 - Menos flexível
+- Adequada para aplicações em tempo real, jogos, chats e similares
 
 ---
 layout: section
@@ -153,12 +157,11 @@ layout: section
 ---
 
 # *Representational State Transfer*
+REST
 - Mais popular e flexível  
 - Usa métodos HTTP
-- **Stateless**
-    - Não há registro entre as requisições  
-- **Layered System**
-    - Múltiplas camadas interagem
+- **Stateless** (Não há registro entre as requisições)
+- *Layered System* (Múltiplas camadas interagem)
 
 ---
 
@@ -166,7 +169,7 @@ layout: section
 
 - GET, POST, PUT, DELETE  
 - Ferramentas para uso/teste:  
-  - [Postman](https://www.postman.com/)
+  - [Postman <logos-postman />](https://www.postman.com/)
 
 ---
 
@@ -218,7 +221,8 @@ Cliente/Servidor Requisição/Resposta
 - *Endpoint* (URL)
 - Método HTTP
 - Parâmetros
-    - Através da URL
+    - URL
+    - Formulários
     - *Cookies*
 
 ---
@@ -229,7 +233,6 @@ Cliente/Servidor Requisição/Resposta
 
 - Status HTTP
     - 200: resposta genérica de êxito
-    - 201: resposta de êxito do método POST
     - 400: solicitação incorreta que o servidor não pode processar
     - 404: recurso não encontrado
 - Corpo da mensagem (JSON)
@@ -287,13 +290,13 @@ app.get('/v1/hi', function(req, res) {
 ---
 
 # API Hello
-`/v1/hi/user/:name`
+`/v1/hi/user/{name}`
 
 5. Criar um *endpoint* para que a mensagem seja concatenada com o nome do usuário passado como parâmetro pela URL. A resposta esperada é uma mensagem em formato JSON a ser exibida no navegador do usuário em resposta a uma requisição GET
 
 ```json
 {
-    "msg": "Hello, [name]"
+    "msg": "Hello, {name}"
 }
 ```
 
@@ -364,13 +367,6 @@ Testando os *endpoints*
     - `/v1/hi`
     - `/v1/hi/user/:name`
     - Qualquer outro (Erro)
-10. Para testar o *endpoint* que atende o método POST é necessário usar um formulário **OU** o comando `curl`
-    - Ver o arquivo `form.html` fornecido na Aula 11 - API do *Google Classroom*
-        - Abra o arquivo no navegador, preencha o formulário e envie
-    - **OU**
-    - No console digite `curl -d 'name=Prog%20Web%201' http://localhost:8000/v1/hi`
-        - Note que os caracteres precisam ser codificados para URL (URL-encoded), por isso o espaço em branco está sendo substituído por `%20`. Para evitar isso, utilize:
-            - `curl --data-urlencode 'name=Prog Web 1' http://localhost:8000/v1/hi`
 
 ---
 
@@ -378,7 +374,17 @@ Testando os *endpoints*
 Testando os *endpoints*
 
 10. Para testar o *endpoint* que atende o método POST é necessário usar um formulário **OU** o comando `curl`
-    - **OU**
+    - Utilizar o arquivo `form.html` fornecido na Aula 16 - API no *Google Classroom* <img src="/thesvg-color-google-classroom.svg" class="w-8 h-8 inline-block" alt="Google Classroom" />
+
+        - Abra o arquivo no navegador, preencha o formulário e envie
+
+---
+
+# API Hello
+Testando os *endpoints*
+
+10. (continuação)
+    - **OU** (`curl`)
     - No console digite `curl -d 'name=Prog%20Web%201' http://localhost:8000/v1/hi`
         - Note que os caracteres precisam ser codificados para URL (URL-encoded), por isso o espaço em branco está sendo substituído por `%20`. Para evitar isso, utilize:
             - `curl --data-urlencode 'name=Prog Web 1' http://localhost:8000/v1/hi`
@@ -393,29 +399,32 @@ layout: section
 layout: fact
 ---
 
-Como publicar as APIs criadas?
+# Como publicar as APIs criadas?
 
 ---
 
 # Ferramentas de Nuvem
 
-- AWS
-- Google Cloud Platform
-- Digital Ocean
+- AWS <logos-aws />
+- Google Cloud Platform <logos-google-cloud />
+- Digital Ocean <logos-digital-ocean-icon />
 - Github Codespaces
-- StackBlitz <logos-stackblitz />
+- StackBlitz <logos-stackblitz-icon />
 
 ---
 
 # Github Codespaces
 [Introdução](https://docs.github.com/pt/codespaces/about-codespaces/what-are-codespaces)
 
+---
+
+# `apihello` no Codespaces
+
+[`apihello`](https://super-duper-xylophone-gvq55756vx63wgqq-8000.app.github.dev/)
 
 ---
 
 # StackBlitz <logos-stackblitz />
-
-
 
 ---
 layout: fact
@@ -433,7 +442,7 @@ Modificar a v1 da API Hello de forma seja exibido um *log* de saída no console 
 
 # 2
 
-Criar a versão 2 (v2) da API Hello de forma que as mensagens sejam exibidas em 3 idiomas diferentes (pt-br, es, en). A opção do idioma é passada através da URL e também através do formulário. As duas versões da API devem ficar disponíveis para o usuário.
+Criar a versão 2 (v2) da API Hello de forma que as mensagens sejam exibidas em 3 idiomas diferentes (pt-br, es, en). A opção do idioma é passada através da URL e também através do formulário. As duas versões da API devem ficar disponíveis para o usuário. Utilize o mesmo projeto permitindo que os usuários utilizem ambas as versões da API diferenciando através dos *endpoints*. Por exemplo, `/v1/hi` e `/v2/hi`.
 
 ---
 
@@ -441,6 +450,7 @@ Criar a versão 2 (v2) da API Hello de forma que as mensagens sejam exibidas em 
 
 - [API Hello](https://github.com/pw1-repo/apihello.git)
 - [body-parser obsoleto](https://codeforgeek.com/body-parser-deprecated/)
+- [WebSockets vs HTTP: Key Differences Explained](https://blog.postman.com/websockets-vs-http-key-differences-explained/)
 
 ---
 src: /snippets/end.md
